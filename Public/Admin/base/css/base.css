@@ -1,0 +1,217 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none !important;
+	color: #3697FF !important;
+}
+
+/*========== top ==========*/
+#top {
+	width: 100%;
+	height: 60px;
+	color: #FFFFFF;
+	background: #3697FF;
+	box-shadow: 1px 0 15px #666363; 
+}
+#top #left {
+	display: inline-block;
+	width: 20%;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	margin-right: 30px;
+}
+#top #left #title{
+    color: #FFFFFF;
+	font-weight: 700;
+	font-size: 30px;
+	top: -3px;
+}
+#top #right {
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 60px;
+    float: right;
+}
+#top #right .portrait {
+    display: inline-block;
+    float: left;
+    height: 54px;
+    margin-top: 3px;
+    border-radius: 50%;
+}
+.dropdown-menu {
+    top: 60px !important;
+    min-width: 30px !important;
+    right: 0 !important;
+}
+.dropdown-toggle:hover {
+    background: none !important;
+    border-color: #3697FF !important;
+}
+.dropdown-toggle {
+    color: #FFFFFF !important;
+    background: none !important;
+    border-color: #3697FF !important;
+}
+
+
+/*========== left ==========*/
+/* navMenu */
+#navMenubox { 
+    width: 220px;
+    background: #1c2229;
+    position: absolute;
+    width: 20%;
+    top: 60px;
+    bottom: 0px;
+    box-shadow: 1px 0 15px #666363; 
+}
+#meunBox {
+	position: absolute;
+	width: 20%;
+	top: 60px;
+	bottom: 0px;	
+	box-shadow: 1px 0 15px #666363; 
+	background-color: #585658;
+}
+.navMenu-top { 
+    padding: 10px; 
+    color: #fff; 
+    border-bottom: 1px solid rgba(255,255,255,.1) 
+}
+.navMenu> li { 
+    display: block;
+    margin: 0; 
+    padding: 0; 
+    border: 0px; 
+ }
+.navMenu>li>a { 
+    display: block; 
+    overflow: hidden; 
+    padding-left: 0px; 
+    line-height: 40px; 
+    color: #ABB1B7; 
+    transition: all .3s; 
+    position: relative; 
+    text-decoration: none; 
+    font-size: 17px; 
+    border-top: 1px solid #222932; 
+    border-bottom: 2px solid #191e24; 
+    padding-left: 25px;
+    color: #CEC8C8 !important;
+}
+.navMenu>li>a>i {
+	line-height: 40px;
+	margin-right: 15px;
+}
+.navMenu > li:nth-of-type(1)> a { 
+    border-top: 1px solid transparent; 
+}
+.navMenu > li:last-child > a { 
+    border-bottom: 1px solid transparent; 
+}
+.navMenu>li>a>i { 
+    font-size: 20px; 
+    float: left; 
+    font-style: normal; 
+    margin: 0 5px; 
+}
+.navMenu li a .arrow:before { 
+    display: block; 
+    float: right; 
+    margin-top: 1px; 
+    margin-right: 15px; 
+    display: inline; 
+    font-size: 16px; 
+    font-family: FontAwesome; 
+    height: auto; 
+    content: "\f105"; 
+    font-weight: 300; 
+    text-shadow: none; 
+}
+.navMenu li a .arrow.open:before { 
+    float: right; 
+    margin-top: 1px; 
+    margin-right: 15px; 
+    display: inline; 
+    font-family: FontAwesome; 
+    height: auto; 
+    font-size: 16px; 
+    content: "\f107"; 
+    font-weight: 300; 
+    text-shadow: none; 
+}
+.navMenu>li>a.active, 
+.navMenu>li>a:hover { 
+    color: #FFF; 
+    background: #12181b; 
+}
+.navMenu>li>ul.sub-menu, 
+.navMenu>li>ul.sub-menu>li>ul.sub-menu { 
+    display: none; 
+    list-style: none; 
+    clear: both; 
+    margin: 8px 0px 0px 10px; 
+    padding-bottom: 5px; 
+    padding-left: 40px !important;
+}
+.navMenu>li.active > ul.sub-menu, 
+/*.navMenu>li>ul.sub-menu>li.active >ul.sub-menu { }*/
+.navMenu>li>ul.sub-menu li { 
+    background: none; 
+    margin: 0px; 
+    padding: 0px; 
+}
+.navMenu>li>ul.sub-menu li>a { 
+    display: block; 
+    font-size: 16px; 
+    line-height: 36px; 
+    padding-left: 20px; 
+    color: #ABB1B7 !important; 
+    clear: both; 
+}
+.navMenu>li>ul.sub-menu li>a.active, 
+.navMenu>li>ul.sub-menu li>a:hover, 
+.navMenu>li>ul.sub-menu>li.active >a { 
+    color: #FFF; 
+    background: #12181b; 
+}
+.icon_1:before { 
+    content: "\f0ac"; 
+}
+.icon_2:before { 
+    content: "\f0ac"; 
+}
+.icon_3:before { 
+    content: "\f0ac"; 
+}
+
+/*===== page_content =====*/
+.page_content {
+    position: absolute;
+    float: right;
+    right: 0px;
+    bottom: 0px;
+    top: 60px;
+    width: 80%;
+    padding: 10px;
+    background: #F5F5F5;
+}
+.page_content>.header_default {
+    font-size: 22px;
+}
+
+/*header*/
+.breadcrumb {
+    background: none !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 14px;
+    font-weight: 900;
+}

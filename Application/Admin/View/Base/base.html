@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>MyProject</title>
+
+	<!-- Css Files  -->
+	<link rel="stylesheet" href="/Public/Admin/base/css/base.css">
+	<link rel="stylesheet" href="/Public/Admin/base/css/bootstrap.css">
+	<!-- <link rel="stylesheet" href="/Public/Admin/css/font-awesome.min.css"> -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- 顶部引入其他CSS文件 -->
+	<block name="other_css"></block>
+</head>
+<body>
+	
+<block name="body">
+	<!-- 导航开始 -->
+	<block name="top">
+		<include file="Base:top" />
+	</block>
+	<!-- 导航结束 -->
+
+	<!-- 侧边栏开始 -->
+	<block name="left">
+		<include file="Base:left" />
+	</block>
+
+	<!-- 内容开始 -->
+	<div class="page_content">
+		<block name="header">
+			<include file="Base:header" />
+		</block>
+
+		<block name="main_content">
+			<include file="Base:blank" />
+		</block>
+
+		<block name="footer">
+			<include file="Base:footer" />
+		</block>
+	</div>
+</block>
+<!-- jQuery -->
+<script type="text/javascript" src="/Public/Admin/base/js/jquery-3.3.1.js"></script>
+<!-- Bootstrap -->
+<script type="text/javascript" src="/Public/Admin/base/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="/Public/Admin/base/js/base.js"></script>
+
+</body>
+</html>

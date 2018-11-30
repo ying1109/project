@@ -1,0 +1,29 @@
+<div class="header_default">
+	<div class="panel panel-default">
+		<div class="panel-body">
+    		<span class="navlist">导航列表</span>
+    		<ol class="breadcrumb">
+    		    <if condition="$one['name'] neq ''">
+    		    	<li>
+    		    		<a href="{$one.value}">{$one.name}</a>
+    		    	</li>
+    		    </if>
+    		    <if condition="$two['name'] neq ''">
+    		    	<li>
+    		    		<a href="{$two.value}">{$two.name}</a>
+    		    	</li>
+    		    </if>
+    		    <if condition="$three['name'] neq ''">
+    		    	<li>
+    		    		<a href="{$three.value}">{$three.name}</a>
+    		    	</li>
+    		    </if>
+    		    <if condition="$four['name'] neq ''">
+    		    	<li>
+    		    		<a href="{$four.value}">{$four.name}</a>
+    		    	</li>
+    		    </if>
+    		</ol>
+    	</div>
+    </div>
+</div>
