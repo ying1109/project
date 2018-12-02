@@ -11,9 +11,9 @@ class IndexController extends BaseController {
         $one = array('name' => '个人中心', 'value' => U('Index/index'));
         $this->assign("one",$one);
 
-        $admin = session();
+        $admin = session('admin_info');
 
-        $this->assign('info', $admin['admin_info']);
+        $this->assign('info', $admin);
         $this->display();
     }
 }

@@ -105,11 +105,11 @@
                 code_input:code_input,
                 code_admin:code_admin,
             },
-            success:function ( data ) {
+            success:function (data) {
                 console.log(data);
 
                 if(data.res == 0){
-                    alert(data.info);
+                    alert(data.msg);
                 }else{
                     var turl = "{:U('Index/index')}";
                     location.href = turl;

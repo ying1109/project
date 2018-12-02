@@ -24,12 +24,14 @@
 	</div>
 	<i id="top_icon" class="fa fa-align-justify fa-2x"></i>
 	<div id="right">
-		<img class="portrait" src="/Public/Admin/base/img/yyy.jpg" alt="img">
-		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Action <span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu">
-			<li><a href="<?php echo U('Login/loginOut');?>">退出</a></li>
+		<ul>
+			<li><span><?php echo ($admin["nickname"]); ?></span></li>
+			<li>
+				<a href="<?php echo U('Login/loginOut');?>">
+					<i class="fa fa-power-off fa-lg"></i>
+					<span>退出</span>
+				</a>
+			</li>
 		</ul>
 	</div>
 </div>
@@ -48,78 +50,53 @@
 		</li>
 
 	    <li>
-	        <a href="javascript:;" <?php if(CONTROLLER_NAME == User): ?>class="active"<?php endif; ?> >
+	        <a href="javascript:;" <?php if(CONTROLLER_NAME == Poetry): ?>class="active"<?php endif; ?> >
 	            <i class="fa fa-user"></i>
-	            <span class="">主页</span> 
-	            <span class="arrow"></span> 
+	            <span class="">诗词歌赋</span>
+	            <span class="arrow"></span>
 	        </a>
-	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == User): ?>style="display: block;"<?php endif; ?>>
+	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Poetry): ?>style="display: block;"<?php endif; ?>>
 	            <li>
-	            	<a href="<?php echo U('User/user');?>" <?php if($_SERVER['PATH_INFO'] == 'User/user'): ?>class="active"<?php endif; ?>>
-	            		用户管理
-	            	</a>
-	            </li>
+					<a href="<?php echo U('Poetry/poem');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/poem'): ?>class="active"<?php endif; ?>>诗</a>
+				</li>
 	            <li>
-	            	<a href="<?php echo U('User/role');?>" <?php if($_SERVER['PATH_INFO'] == 'User/role'): ?>class="active"<?php endif; ?>>
-	            		角色管理
-	            	</a>
-	            </li>
-	            <li><a href="javascript:;">权限管理</a></li>
-	            <li><a href="javascript:;">我的任务</a></li>
-	            <li><a href="javascript:;">个人信息</a></li>
+					<a href="<?php echo U('Poetry/ci');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/ci'): ?>class="active"<?php endif; ?>>词</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Poetry/song');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/song'): ?>class="active"<?php endif; ?>>歌</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Poetry/fu');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/fu'): ?>class="active"<?php endif; ?>>赋</a>
+				</li>
 	        </ul>
 	    </li>
 
 	    <li>
-	        <a href="javascript:;" <?php if(CONTROLLER_NAME == Web): ?>class="active"<?php endif; ?> > 
+	        <a href="javascript:;" <?php if(CONTROLLER_NAME == Auth): ?>class="active"<?php endif; ?> >
 	            <i class="fa fa-user"></i>
-	            <span class="">网站管理</span> 
-	            <span class="arrow"></span> 
+	            <span class="">权限管理</span>
+	            <span class="arrow"></span>
 	        </a>
-	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Web): ?>style="display: block;"<?php endif; ?>>
+	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Auth): ?>style="display: block;"<?php endif; ?>>
 	            <li>
-	            	<a href="<?php echo U('Web/web');?>" <?php if($_SERVER['PATH_INFO'] == 'Web/web'): ?>class="active"<?php endif; ?>>
-	            		网站设置
-	            	</a>
-	            </li>
-	        </ul>
-	    </li>
-	    
-	    <li> 
-	        <a href="javascript:;">
-	            <i class="fa fa-user"></i>
-	            <span>文章管理</span>
-	        </a> 
-	    </li>
-
-	    <li> 
-	        <a href="javascript:;"> 
-	            <i class="fa fa-user"></i>
-	            <span class="nav-text">系统管理</span> 
-	            <span class="arrow"></span> 
-	        </a>
-	        <ul class="sub-menu">
-	            <li><a href="javascript:;" >用户管理</a></li>
-	            <li><a href="javascript:;">角色管理</a></li>
-	            <li><a href="javascript:;">系统参数</a></li>
+					<a href="<?php echo U('Auth/myAuth');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/aboutUs'): ?>class="active"<?php endif; ?>>我的权限</a>
+				</li>
 	        </ul>
 	    </li>
 
-	    <li> 
-	        <a href="javascript:;"> 
-	            <i class="fa fa-user"></i>
-	            <span class="nav-text">统计报表</span> 
-	            <span class="arrow"></span> 
-	        </a>
-	        <ul class="sub-menu">
-	            <li><a href="javascript:;" >发运表</a></li>
-	            <li><a href="javascript:;">发运结算表</a></li>
-	            <li><a href="javascript:;">自营车表</a></li>
-	            <li><a href="javascript:;">导入发运报表</a></li>
-	            <li><a href="javascript:;">打印</a></li>
-	            <li><a href="javascript:;">数据查询</a></li>
-	        </ul>
-	    </li>
+		<li>
+			<a href="javascript:;" <?php if(CONTROLLER_NAME == System): ?>class="active"<?php endif; ?> >
+			<i class="fa fa-user"></i>
+			<span class="">系统设置</span>
+			<span class="arrow"></span>
+			</a>
+			<ul class="sub-menu"  <?php if(CONTROLLER_NAME == System): ?>style="display: block;"<?php endif; ?>>
+				<li>
+					<a href="<?php echo U('System/aboutUs');?>" <?php if($_SERVER['PATH_INFO'] == 'System/aboutUs'): ?>class="active"<?php endif; ?>>关于我们</a>
+				</li>
+			</ul>
+		</li>
+
 	</ul>
 </div>
 	
@@ -190,6 +167,15 @@
 <script type="text/javascript" src="/Public/Admin/base/js/bootstrap.js"></script>
 
 <script type="text/javascript" src="/Public/Admin/base/js/base.js"></script>
+
+<script type="text/javascript">
+    var height = $(document).height() + 90;
+    $('#navMenubox').css({'height': height});
+</script>
+
+
+
+
 
 </body>
 </html>

@@ -25,6 +25,7 @@ a {
 	line-height: 60px;
 	text-align: center;
 	margin-right: 30px;
+    border-right: 1px solid #1b6d85;
 }
 #top #left #title{
     color: #FFFFFF;
@@ -38,12 +39,17 @@ a {
     line-height: 60px;
     float: right;
 }
-#top #right .portrait {
+#top #right ul li {
     display: inline-block;
     float: left;
-    height: 54px;
-    margin-top: 3px;
-    border-radius: 50%;
+    color: #FFFFFF;
+    margin-right: 20px;
+}
+#top #right ul li a i{
+    color: #FFFFFF;
+}
+#top #right ul li span{
+    color: #FFFFFF;
 }
 .dropdown-menu {
     top: 60px !important;
@@ -65,19 +71,17 @@ a {
 /* navMenu */
 #navMenubox { 
     width: 220px;
-    background: #1c2229;
+    background: #1C2229;
     position: absolute;
     width: 20%;
     top: 60px;
     bottom: 0px;
-    box-shadow: 1px 0 15px #666363; 
 }
 #meunBox {
 	position: absolute;
 	width: 20%;
 	top: 60px;
 	bottom: 0px;	
-	box-shadow: 1px 0 15px #666363; 
 	background-color: #585658;
 }
 .navMenu-top { 

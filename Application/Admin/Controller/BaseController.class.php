@@ -12,5 +12,8 @@ class BaseController extends Controller {
         if(!$member_id){
             $this->redirect('Login/login');
         }
+
+        $admin_info = session('admin_info');
+        $this->assign('admin', $admin_info);
     }
 }

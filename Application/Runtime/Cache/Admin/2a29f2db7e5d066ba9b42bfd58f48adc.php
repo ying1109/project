@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>my_project</title>
+	<title>MyProject</title>
 
 	<!-- Css Files  -->
-	<link rel="stylesheet" href="/Public/Admin/css/base.css">
-	<link rel="stylesheet" href="/Public/Admin/css/bootstrap.css">
+	<link rel="stylesheet" href="/Public/Admin/base/css/base.css">
+	<link rel="stylesheet" href="/Public/Admin/base/css/bootstrap.css">
 	<!-- <link rel="stylesheet" href="/Public/Admin/css/font-awesome.min.css"> -->
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -23,6 +23,17 @@
 		<span id="title">后台管理</span>
 	</div>
 	<i id="top_icon" class="fa fa-align-justify fa-2x"></i>
+	<div id="right">
+		<ul>
+			<li><span><?php echo ($admin["nickname"]); ?></span></li>
+			<li>
+				<a href="<?php echo U('Login/loginOut');?>">
+					<i class="fa fa-power-off fa-lg"></i>
+					<span>退出</span>
+				</a>
+			</li>
+		</ul>
+	</div>
 </div>
 	
 	<!-- 导航结束 -->
@@ -32,82 +43,24 @@
 		<div id="navMenubox">
 	<ul class="navMenu">
 		<li> 
-		    <a href="<?php echo U('User/user');?>" <?php if(CONTROLLER_NAME == 'User'): ?>class="active"<?php endif; ?> >
-		        <i id="left_icon" class="fa fa-user"></i>
+		    <a href="<?php echo U('Index/index');?>" <?php if(CONTROLLER_NAME == 'Index'): ?>class="active"<?php endif; ?> >
+		        <i class="fa fa-user"></i>
 		        <span>个人中心</span>
 		    </a> 
 		</li>
 
 	    <li>
-	        <a href="javascript:;" <?php if(CONTROLLER_NAME == Index): ?>class="active"<?php endif; ?> > 
-	            <i id="left_icon" class="fa fa-user"></i>
-	            <span class="">主页</span> 
+	        <a href="javascript:;" <?php if(CONTROLLER_NAME == System): ?>class="active"<?php endif; ?> >
+	            <i class="fa fa-user"></i>
+	            <span class="">系统设置</span>
 	            <span class="arrow"></span> 
 	        </a>
-	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Index): ?>style="display: block;"<?php endif; ?>>
+	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == System): ?>style="display: block;"<?php endif; ?>>
 	            <li>
-	            	<a href="<?php echo U('Index/index');?>" <?php if($_SERVER['PATH_INFO'] == 'Index/index'): ?>class="active"<?php endif; ?>>
-	            		用户管理
+	            	<a href="<?php echo U('System/aboutUs');?>" <?php if($_SERVER['PATH_INFO'] == 'System/aboutUs'): ?>class="active"<?php endif; ?>>
+	            		关于我们
 	            	</a>
 	            </li>
-	            <li>
-	            	<a href="<?php echo U('Index/role');?>" <?php if($_SERVER['PATH_INFO'] == 'Index/role'): ?>class="active"<?php endif; ?>>
-	            		角色管理
-	            	</a>
-	            </li>
-	            <li><a href="javascript:;">权限管理</a></li>
-	            <li><a href="javascript:;">我的任务</a></li>
-	            <li><a href="javascript:;">个人信息</a></li>
-	        </ul>
-	    </li>
-	    
-	    <li> 
-	        <a href="javascript:;"> 
-	            <i id="left_icon" class="fa fa-user"></i>
-	            <span class="nav-text">网站配置</span> 
-	            <span class="arrow"></span> 
-	        </a>
-	        <ul class="sub-menu">
-	            <li><a href="<?php echo U('Web/web');?>"><span>网站设置</span></a></li>
-	            <li><a href="javascript:;"><span>友情链接</span></a></li>
-	            <li><a href="javascript:;"><span>分类管理</span></a></li>
-	            <li><a href="javascript:;"><span>系统日志</span></a></li>
-	        </ul>
-	    </li>
-
-	    <li> 
-	        <a href="javascript:;">
-	            <i id="left_icon" class="fa fa-user"></i>
-	            <span>文章管理</span>
-	        </a> 
-	    </li>
-
-	    <li> 
-	        <a href="javascript:;"> 
-	            <i id="left_icon" class="fa fa-user"></i>
-	            <span class="nav-text">系统管理</span> 
-	            <span class="arrow"></span> 
-	        </a>
-	        <ul class="sub-menu">
-	            <li><a href="javascript:;" >用户管理</a></li>
-	            <li><a href="javascript:;">角色管理</a></li>
-	            <li><a href="javascript:;">系统参数</a></li>
-	        </ul>
-	    </li>
-
-	    <li> 
-	        <a href="javascript:;"> 
-	            <i id="left_icon" class="fa fa-user"></i>
-	            <span class="nav-text">统计报表</span> 
-	            <span class="arrow"></span> 
-	        </a>
-	        <ul class="sub-menu">
-	            <li><a href="javascript:;" >发运表</a></li>
-	            <li><a href="javascript:;">发运结算表</a></li>
-	            <li><a href="javascript:;">自营车表</a></li>
-	            <li><a href="javascript:;">导入发运报表</a></li>
-	            <li><a href="javascript:;">打印</a></li>
-	            <li><a href="javascript:;">数据查询</a></li>
 	        </ul>
 	    </li>
 	</ul>
@@ -155,11 +108,11 @@
 	</div>
 
 <!-- jQuery -->
-<script type="text/javascript" src="/Public/Admin/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/Public/Admin/base/js/jquery-3.3.1.js"></script>
 <!-- Bootstrap -->
-<script type="text/javascript" src="/Public/Admin/js/bootstrap.js"></script>
+<script type="text/javascript" src="/Public/Admin/base/js/bootstrap.js"></script>
 
-<script type="text/javascript" src="/Public/Admin/js/base.js"></script>
+<script type="text/javascript" src="/Public/Admin/base/js/base.js"></script>
 
 </body>
 </html>

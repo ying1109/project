@@ -4,12 +4,14 @@
 	</div>
 	<i id="top_icon" class="fa fa-align-justify fa-2x"></i>
 	<div id="right">
-		<img class="portrait" src="/Public/Admin/base/img/yyy.jpg" alt="img">
-		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Action <span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu">
-			<li><a href="{:U('Login/loginOut')}">退出</a></li>
+		<ul>
+			<li><span>{$admin.nickname}</span></li>
+			<li>
+				<a href="{:U('Login/loginOut')}">
+					<i class="fa fa-power-off fa-lg"></i>
+					<span>退出</span>
+				</a>
+			</li>
 		</ul>
 	</div>
 </div>
