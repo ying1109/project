@@ -1,6 +1,8 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
+
+header('content-type:text/html; charset=utf-8');
 class SystemController extends BaseController {
     public function aboutUs(){
     	$one = array('name'=>'系统设置','value'=>U('System/aboutUs'));
