@@ -7,24 +7,26 @@ li {
 }
 a {
 	text-decoration: none !important;
-	color: #3697FF !important;
+	/*color: #3697FF !important;*/
 }
 
 /*========== top ==========*/
 #top {
+    position: fixed;
 	width: 100%;
 	height: 60px;
 	color: #FFFFFF;
 	background: #3697FF;
-	box-shadow: 1px 0 15px #666363; 
+	box-shadow: 1px 0 15px #666363;
+    z-index: 1000;
 }
 #top #left {
-	display: inline-block;
 	width: 20%;
 	height: 60px;
 	line-height: 60px;
 	text-align: center;
-	margin-right: 30px;
+    float: left;
+    background: rgba(28, 34, 41, 0.3);
     border-right: 1px solid #1b6d85;
 }
 #top #left #title{
@@ -33,8 +35,14 @@ a {
 	font-size: 30px;
 	top: -3px;
 }
+#top i#top_icon {
+    color: #FFFFFF;
+    line-height: 60px;
+	font-size: 30px;
+    padding: 0 30px;
+}
 #top #right {
-    display: inline-block;
+    float: left;
     margin-right: 10px;
     line-height: 60px;
     float: right;
@@ -72,17 +80,13 @@ a {
 #navMenubox { 
     width: 220px;
     background: #1C2229;
-    position: absolute;
+    position: fixed;
     width: 20%;
-    top: 60px;
+    top: 0px;
     bottom: 0px;
 }
-#meunBox {
-	position: absolute;
-	width: 20%;
-	top: 60px;
-	bottom: 0px;	
-	background-color: #585658;
+.navMenu {
+    margin-top: 60px;
 }
 .navMenu-top { 
     padding: 10px; 

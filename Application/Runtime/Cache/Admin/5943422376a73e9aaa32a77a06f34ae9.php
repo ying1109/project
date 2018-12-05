@@ -133,20 +133,21 @@
 		
     <div class="panel panel-default">
         <div class="panel-body">
-            <form class="form-horizontal" method="POST" action="">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">详情：</label>
-                    <div class="col-sm-10">
-                        <textarea id="editor" name="detail" style="width:600px;height:500px;"><?php echo ($info["detail"]); ?></textarea>
+            <div class="form-group">
+                <a href="<?php echo U('bannerAdd');?>" class="btn btn-primary">添加编辑</a>
+            </div>
+            <?php if(is_array($banner)): foreach($banner as $key=>$value): ?><div class="col-md-6 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body status">
+                            <ul class="panel-tools panel-tools-hover">
+                                <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                            </ul>
+                            <div class="image col-md-12">
+                                <img src="<?php echo ($value['pic']['file_path']); ?>" onerror="javascript:this.src='/Public/Common/img/default.png'" alt="<?php echo ($value['pic']['name']); ?>">
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-primary">提交</button>
-                    </div>
-                </div>
-            </form>
+                </div><?php endforeach; endif; ?>
         </div>
     </div>
 
@@ -164,16 +165,6 @@
 <script type="text/javascript" src="/Public/Admin/base/js/base.js"></script>
 
 <!--底部引入其他js文件-->
-
-    <!-- 富文本 -->
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/base/ueditor/ueditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/base/ueditor/ueditor.all.min.js"> </script>
-    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
-    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/base/ueditor/lang/zh-cn/zh-cn.js"></script>
-    <script type="text/javascript">
-        var ue = UE.getEditor('editor');
-    </script>
 
 
 </body>

@@ -1,0 +1,35 @@
+<!-- <a href="{:U('Index/index')}" title="">我我我我我我我我我我</a> -->
+<extend name="Base:base" />
+
+<block name="other_css"></block>
+
+<!-- 内容结束开始 -->
+<block name="main_content">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <a href="{:U('bannerAdd')}" class="btn btn-primary">添加编辑</a>
+            </div>
+            <foreach name="banner" item="value">
+                <div class="col-md-6 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body status">
+                            <ul class="panel-tools panel-tools-hover">
+                                <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                            </ul>
+                            <div class="image col-md-12">
+                                <img src="{$value['pic']['file_path']}" onerror="javascript:this.src='/Public/Common/img/default.png'" alt="{$value['pic']['name']}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </foreach>
+        </div>
+    </div>
+</block>
+<!-- 内容结束结束 -->
+
+
+<block name="other_script_down">
+
+</block>

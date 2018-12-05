@@ -94,6 +94,9 @@
 				<li>
 					<a href="<?php echo U('System/aboutUs');?>" <?php if($_SERVER['PATH_INFO'] == 'System/aboutUs'): ?>class="active"<?php endif; ?>>关于我们</a>
 				</li>
+				<li>
+					<a href="<?php echo U('System/banner');?>" <?php if($_SERVER['PATH_INFO'] == 'System/banner'): ?>class="active"<?php endif; ?>>轮播图</a>
+				</li>
 			</ul>
 		</li>
 
@@ -168,13 +171,7 @@
 
 <script type="text/javascript" src="/Public/Admin/base/js/base.js"></script>
 
-<script type="text/javascript">
-    var height = $(document).height() + 90;
-    $('#navMenubox').css({'height': height});
-</script>
-
-
-
+<!--底部引入其他js文件-->
 
 
 </body>
