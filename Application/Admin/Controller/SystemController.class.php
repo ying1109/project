@@ -41,18 +41,33 @@ class SystemController extends BaseController {
         $this->assign("one",$one);
         $this->assign("two",$two);
 
-        $this->display();
-    }
-    
-    //轮播图添加
-    public function bannerAdd() {
         $Banner = D('Banner');
 
         $map['id'] = 1;
         $info      = $Banner->info($map);
         $banner    = json_decode($info['banner'], true);
 
-        $this->assign('info', $banner);
+        $this->assign('list', $banner);
+
+        $this->display();
+    }
+    
+    //轮播图添加
+    public function bannerAdd() {
+        $one   = array('name' => '系统设置', 'value' => U('System/banner'));
+        $two   = array('name' => '轮播图管理', 'value' => U('System/banner'));
+        $three = array('name' => '添加', 'value'=>U('System/bannerAdd'));
+        $this->assign("one",$one);
+        $this->assign("two",$two);
+        $this->assign("three",$three);
+
+        $Banner = D('Banner');
+
+        $map['id'] = 1;
+        $info      = $Banner->info($map);
+        $banner    = json_decode($info['banner'], true);
+
+        $this->assign('list', $banner);
 
         if (IS_POST) {
             if (empty($_POST['post_banner'])) {
@@ -60,12 +75,26 @@ class SystemController extends BaseController {
             }
 
             $banner_list = array();
-            echo "<pre>";
-            var_dump($_POST);
-            die;
-            /*foreach ($_POST['post_banner'] as $k => $v) {
-
-            }*/
+            foreach ($_POST['post_banner'] as $k => $v) {
+                $banner_list[$k]['pic']       = json_decode($v, true);
+                $banner_list[$k]['link_url']  = $_POST['link_url'][$k] ? $_POST['link_url'][$k] : '';
+                $banner_list[$k]['link_info'] = $_POST['link_info'][$k] ? $_POST['link_info'][$k] : '';
+            }
+            $data['banner']      = json_encode($banner_list);
+            $data['update_time'] = time();
+            if ($banner) {
+                $res = $Banner->update($map, $data);
+            } else {
+                $data['create_time'] = time();
+                $res = $Banner->add($data);
+            }
+            
+            if ($res['status']) {
+                $this->success('提交成功', U('System/banner'));
+            } else {
+                $this->error('提交失败');
+            }
+            exit;
         }
 
         $this->display();

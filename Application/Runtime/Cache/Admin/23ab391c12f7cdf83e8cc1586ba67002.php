@@ -739,7 +739,7 @@
                                 response.file_info.name
                                 +"</div><div class='close-btn'><i class='fa fa-times'></i></div><input name='post_banner[]' type='hidden' value='"+
                                 JSON.stringify( response.file_info )
-                                +"' /><input name='link_url[]' placeholder=''/> <input name='link_info[]' placeholder=''/> </div> " )
+                                +"' /><input name='link_url[]' type='hidden' placeholder=''/> <input name='link_info[]' type='hidden' placeholder=''/> </div> " )
                         }
                     }else{
                         alert( response.info );

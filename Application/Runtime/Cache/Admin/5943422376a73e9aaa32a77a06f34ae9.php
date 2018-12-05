@@ -12,6 +12,8 @@
 
 	<!-- 顶部引入其他CSS文件 -->
 	
+    <link type="text/css" href="/Public/Admin/webuploader/style.css" rel="stylesheet" />
+
 </head>
 <body>
 	
@@ -136,18 +138,9 @@
             <div class="form-group">
                 <a href="<?php echo U('bannerAdd');?>" class="btn btn-primary">添加编辑</a>
             </div>
-            <?php if(is_array($banner)): foreach($banner as $key=>$value): ?><div class="col-md-6 col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-body status">
-                            <ul class="panel-tools panel-tools-hover">
-                                <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-                            </ul>
-                            <div class="image col-md-12">
-                                <img src="<?php echo ($value['pic']['file_path']); ?>" onerror="javascript:this.src='/Public/Common/img/default.png'" alt="<?php echo ($value['pic']['name']); ?>">
-                            </div>
-                        </div>
-                    </div>
-                </div><?php endforeach; endif; ?>
+            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div id="banner">
+                    <img src="<?php echo ($v['pic']['file_path']); ?>" onerror="javascript:this.src='/Public/Common/img/default.png'" alt="<?php echo ($v['pic']['name']); ?>">
+                </div><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
     </div>
 
