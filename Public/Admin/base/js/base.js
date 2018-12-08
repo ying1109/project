@@ -4,7 +4,7 @@
 $('#top_icon').mousedown(function(event) {
 	if ($('#navMenubox').is(':hidden')) {
 		$('#navMenubox').show();
-		$('.page_content').css('width', '80%');
+		$('.page_content').css('width', '81%');
 	} else {
 		$('#navMenubox').hide();
 		$('.page_content').css('width', '100%');

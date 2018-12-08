@@ -9,6 +9,7 @@
 			'Mongo' instanceof Think\Model\MongoModel,
 			'View' instanceof Think\Model\ViewModel,
 			'Relation' instanceof Think\Model\RelationModel,
+			'Banner' instanceof Admin\Model\BannerModel,
 			'AboutUs' instanceof Admin\Model\AboutUsModel,
 			'Admin' instanceof Admin\Model\AdminModel,
 			'Merge' instanceof Think\Model\MergeModel,

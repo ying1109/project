@@ -2,7 +2,10 @@
 <extend name="Base:base" />
 
 <block name="other_css">
+    <!--轮播图样式-->
     <link type="text/css" href="/Public/Admin/webuploader/style.css" rel="stylesheet" />
+    <!--图片缩放放大镜图标-->
+    <link type="text/css" href="/Public/Admin/zoomify/zoomify.min.css" rel="stylesheet" />
 </block>
 
 <!-- 内容结束开始 -->
@@ -13,8 +16,8 @@
                 <a href="{:U('bannerAdd')}" class="btn btn-primary">添加编辑</a>
             </div>
             <volist name="list" id="v">
-                <div id="banner">
-                    <img src="{$v['pic']['file_path']}" onerror="javascript:this.src='/Public/Common/img/default.png'" alt="{$v['pic']['name']}">
+                <div class="banner">
+                    <img src="{$v.pic.file_path}" >
                 </div>
             </volist>
         </div>
@@ -22,7 +25,10 @@
 </block>
 <!-- 内容结束结束 -->
 
-
-<block name="other_script_down">
-
+<block name="other_script">
+<!--图片缩放-->
+<script type="text/javascript" charset="utf-8" src="/Public/Admin/zoomify/zoomify.min.js"></script>
+<script type="text/javascript">
+    $('img').zoomify();
+</script>
 </block>

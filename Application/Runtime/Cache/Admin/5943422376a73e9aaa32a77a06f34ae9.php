@@ -12,7 +12,10 @@
 
 	<!-- 顶部引入其他CSS文件 -->
 	
+    <!--轮播图样式-->
     <link type="text/css" href="/Public/Admin/webuploader/style.css" rel="stylesheet" />
+    <!--图片缩放放大镜图标-->
+    <link type="text/css" href="/Public/Admin/zoomify/zoomify.min.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -138,8 +141,8 @@
             <div class="form-group">
                 <a href="<?php echo U('bannerAdd');?>" class="btn btn-primary">添加编辑</a>
             </div>
-            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div id="banner">
-                    <img src="<?php echo ($v['pic']['file_path']); ?>" onerror="javascript:this.src='/Public/Common/img/default.png'" alt="<?php echo ($v['pic']['name']); ?>">
+            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div class="banner">
+                    <img src="<?php echo ($v["pic"]["file_path"]); ?>" >
                 </div><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
     </div>
@@ -158,6 +161,12 @@
 <script type="text/javascript" src="/Public/Admin/base/js/base.js"></script>
 
 <!--底部引入其他js文件-->
+
+<!--图片缩放-->
+<script type="text/javascript" charset="utf-8" src="/Public/Admin/zoomify/zoomify.min.js"></script>
+<script type="text/javascript">
+    $('img').zoomify();
+</script>
 
 
 </body>
