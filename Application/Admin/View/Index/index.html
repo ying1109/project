@@ -1,7 +1,10 @@
 <!-- <a href="{:U('Index/index')}" title="">我我我我我我我我我我</a> -->
 <extend name="Base:base" />
 
-<block name="other_css"></block>
+<block name="other_css">
+    <!--图片缩放放大镜图标-->
+    <link type="text/css" href="/Public/Admin/zoomify/zoomify.min.css" rel="stylesheet" />
+</block>
 
 <!-- 内容结束开始 -->
 <block name="main_content">
@@ -23,9 +26,16 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="col-sm-2 control-label">头像：</label>
+                    <div class="col-sm-10">
+                        <img src="{$info.portrait}" style="width: 300px;" alt="">
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label class="col-sm-2 control-label">创建时间：</label>
                     <div class="col-sm-10">
-                        <p class="form-control-static">{$info.create_time|date = 'Y-m-d H:i:s', ###}</p>
+                        <p class="form-control-static">{$info.create_time|date='Y-m-d H:i:s', ###}</p>
                     </div>
                 </div>
             </form>
@@ -35,6 +45,10 @@
 <!-- 内容结束结束 -->
 
 
-<block name="other_script_down">
-
+<block name="other_script">
+    <!--图片缩放-->
+    <script type="text/javascript" charset="utf-8" src="/Public/Admin/zoomify/zoomify.min.js"></script>
+    <script type="text/javascript">
+        $('img').zoomify();
+    </script>
 </block>

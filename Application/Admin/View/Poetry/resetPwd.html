@@ -1,0 +1,74 @@
+<extend name="Base:base" />
+
+<block name="other_css">
+    <link type="text/css" href="/Public/Admin/webuploader/webuploader.css" rel="stylesheet" />
+    <link type="text/css" href="/Public/Admin/webuploader/style.css" rel="stylesheet" />
+</block>
+
+<!-- 内容结束开始 -->
+<block name="main_content">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form-horizontal" method="POST" action="" onsubmit="return checkForm()">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">原密码：</label>
+                    <div class="col-sm-6">
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">新密码：</label>
+                    <div class="col-sm-6">
+                        <input type="password" class="form-control" id="password1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">再次输入：</label>
+                    <div class="col-sm-6">
+                        <input type="password" class="form-control" id="password2">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-2">
+                        <input type="button" class="btn btn-success" id="submit" value="提交">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</block>
+<!-- 内容结束结束 -->
+
+
+<block name="other_script">
+<script type="text/javascript">
+    $('#submit').click(function () {
+        var pwd  = $('#password').val();
+        var pwd1 = $('#password1').val();
+        var pwd2 = $('#password2').val();
+
+        $.ajax({
+            url: "{:U('Ajax/resetPwd')}",
+            type: 'post',
+            dataType: 'json',
+            data: {
+                pwd: pwd,
+                pwd1: pwd1,
+                pwd2: pwd2,
+            },
+            success: function (data) {
+                if (data.res == 1) {
+                    var url = "{:U('Auth/resetPwd')}";
+                    location.href = url;
+                } else {
+                    alert(data.msg);
+                }
+            }
+        })
+    })
+</script>
+</block>

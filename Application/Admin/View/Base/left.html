@@ -37,7 +37,13 @@
 	        </a>
 	        <ul class="sub-menu"  <if condition="CONTROLLER_NAME == Auth">style="display: block;"</if>>
 	            <li>
-					<a href="{:U('Auth/myAuth')}" <if condition="$_SERVER['PATH_INFO'] == 'Auth/aboutUs'">class="active"</if>>我的权限</a>
+					<a href="{:U('Auth/myAuth')}" <if condition="$_SERVER['PATH_INFO'] == 'Auth/myAuth'">class="active"</if>>我的权限</a>
+				</li>
+	            <li>
+					<a href="{:U('Auth/admin')}" <if condition="$_SERVER['PATH_INFO'] == 'Auth/admin'">class="active"</if>>管理员</a>
+				</li>
+	            <li>
+					<a href="{:U('Auth/resetPwd')}" <if condition="$_SERVER['PATH_INFO'] == 'Auth/resetPwd'">class="active"</if>>安全设置</a>
 				</li>
 	        </ul>
 	    </li>

@@ -18,7 +18,7 @@ a {
 	color: #FFFFFF;
 	background: #3697FF;
 	box-shadow: 1px 0 15px #666363;
-    z-index: 1000;
+    z-index: 500;
 }
 #top #left {
 	width: 19%;

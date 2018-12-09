@@ -78,7 +78,6 @@
 </div>
 <div class="OverWindows"></div>
 <script src="/Public/Admin/base/js/jquery-3.3.1.js"></script>
-<!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
 <script src="/Public/Admin/login/js/jquery-ui.min.js" type="text/javascript" ></script>
 <script src='/Public/Admin/login/js/stopExecutionOnTimeout.js?t=1' type="text/javascript"></script>
 <script src="/Public/Admin/login/layui/layui.js" type="text/javascript"></script>
@@ -88,10 +87,10 @@
 <script src="/Public/Admin/login/js/controlLogin.js" type="text/javascript"></script>
 <script>
     $('#login').click(function () {
-        var login = $('.username').val();
-        var pwd = $('.passwordNumder').val();
-        var code = $('.ValidateNum').val();
-        var AdminCode = getCookieValue("AdminCode");
+        var login 	   = $('.username').val();
+        var pwd 	   = $('.passwordNumder').val();
+        var code	   = $('.ValidateNum').val();
+        var AdminCode  = getCookieValue("AdminCode");
         var code_input = code.toUpperCase();
         var code_admin = AdminCode.toUpperCase();
 

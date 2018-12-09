@@ -52,8 +52,8 @@ class SystemController extends BaseController {
         $this->display();
     }
     
-    //轮播图添加
-    public function bannerAdd() {
+    //轮播图添加编辑
+    public function bannerAddEdit() {
         $one   = array('name' => '系统设置', 'value' => U('System/banner'));
         $two   = array('name' => '轮播图管理', 'value' => U('System/banner'));
         $three = array('name' => '添加', 'value'=>U('System/bannerAdd'));

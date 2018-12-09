@@ -33,7 +33,7 @@ class AdminModel extends Model {
         }
     }
 
-    public function lists($map, $firstRow=0,$listRows=0,$sort="id desc") {
+    public function lists($map = '', $firstRow = 0,$listRows = 0,$sort = "id asc") {
         $M    = M('Admin');
         $list = $M->where($map)->order($sort)->limit($firstRow,$listRows)->select();
 

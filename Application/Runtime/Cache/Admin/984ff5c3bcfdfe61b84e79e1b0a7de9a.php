@@ -79,7 +79,13 @@
 	        </a>
 	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Auth): ?>style="display: block;"<?php endif; ?>>
 	            <li>
-					<a href="<?php echo U('Auth/myAuth');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/aboutUs'): ?>class="active"<?php endif; ?>>我的权限</a>
+					<a href="<?php echo U('Auth/myAuth');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/myAuth'): ?>class="active"<?php endif; ?>>我的权限</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/admin');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/admin'): ?>class="active"<?php endif; ?>>管理员</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>
 				</li>
 	        </ul>
 	    </li>
@@ -168,8 +174,6 @@
     <!-- 富文本 -->
     <script type="text/javascript" charset="utf-8" src="/Public/Admin/base/ueditor/ueditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="/Public/Admin/base/ueditor/ueditor.all.min.js"> </script>
-    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
-    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
     <script type="text/javascript" charset="utf-8" src="/Public/Admin/base/ueditor/lang/zh-cn/zh-cn.js"></script>
     <script type="text/javascript">
         var ue = UE.getEditor('editor');

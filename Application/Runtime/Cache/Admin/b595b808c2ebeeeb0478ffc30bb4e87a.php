@@ -12,6 +12,9 @@
 
 	<!-- 顶部引入其他CSS文件 -->
 	
+    <!--图片缩放放大镜图标-->
+    <link type="text/css" href="/Public/Admin/zoomify/zoomify.min.css" rel="stylesheet" />
+
 </head>
 <body>
 	
@@ -79,7 +82,13 @@
 	        </a>
 	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Auth): ?>style="display: block;"<?php endif; ?>>
 	            <li>
-					<a href="<?php echo U('Auth/myAuth');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/aboutUs'): ?>class="active"<?php endif; ?>>我的权限</a>
+					<a href="<?php echo U('Auth/myAuth');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/myAuth'): ?>class="active"<?php endif; ?>>我的权限</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/admin');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/admin'): ?>class="active"<?php endif; ?>>管理员</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>
 				</li>
 	        </ul>
 	    </li>
@@ -149,9 +158,16 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="col-sm-2 control-label">头像：</label>
+                    <div class="col-sm-10">
+                        <img src="<?php echo ($info["portrait"]); ?>" style="width: 300px;" alt="">
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label class="col-sm-2 control-label">创建时间：</label>
                     <div class="col-sm-10">
-                        <p class="form-control-static"><?php echo (date( 'Y-m-d H:i:s', $info["create_time"])); ?></p>
+                        <p class="form-control-static"><?php echo (date('Y-m-d H:i:s', $info["create_time"])); ?></p>
                     </div>
                 </div>
             </form>
@@ -172,6 +188,12 @@
 <script type="text/javascript" src="/Public/Admin/base/js/base.js"></script>
 
 <!--底部引入其他js文件-->
+
+    <!--图片缩放-->
+    <script type="text/javascript" charset="utf-8" src="/Public/Admin/zoomify/zoomify.min.js"></script>
+    <script type="text/javascript">
+        $('img').zoomify();
+    </script>
 
 
 </body>

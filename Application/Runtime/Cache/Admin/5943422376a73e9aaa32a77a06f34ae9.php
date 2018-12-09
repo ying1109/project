@@ -84,7 +84,13 @@
 	        </a>
 	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Auth): ?>style="display: block;"<?php endif; ?>>
 	            <li>
-					<a href="<?php echo U('Auth/myAuth');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/aboutUs'): ?>class="active"<?php endif; ?>>我的权限</a>
+					<a href="<?php echo U('Auth/myAuth');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/myAuth'): ?>class="active"<?php endif; ?>>我的权限</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/admin');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/admin'): ?>class="active"<?php endif; ?>>管理员</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>
 				</li>
 	        </ul>
 	    </li>
@@ -139,7 +145,7 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="form-group">
-                <a href="<?php echo U('bannerAdd');?>" class="btn btn-primary">添加编辑</a>
+                <a href="<?php echo U('bannerAddEdit');?>" class="btn btn-primary">添加编辑</a>
             </div>
             <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div class="banner">
                     <img src="<?php echo ($v["pic"]["file_path"]); ?>" >

@@ -21,12 +21,12 @@ class LoginController extends Controller {
             $this->ajaxReturn(array('res'=>0,'msg'=>'账号、密码、验证码不能为空！'));
         } else {
             if ($code_input == $code_admin) {
-                $password = md5(md5($account) . md5($password));
+                $password = md5($password);
                 $info     = M('Admin')->where(array('username'=>$account,'password_md5'=>$password))->find();
                 if (!$info) {
                     $this->ajaxReturn(array('res'=>0,'msg'=>'账号或密码错误'));
                 } else {
-                    $map['admin_id']         = $info['admin_id'];
+                    $map['id']               = $info['id'];
                     $data['this_login_time'] = time();
                     $data['this_login_ip']   = $_SERVER['REMOTE_ADDR'];
                     $data['last_login_time'] = $info['this_login_time'];
@@ -34,7 +34,7 @@ class LoginController extends Controller {
                     M('Admin')->where($map)->save($data);
 
                     //确认登录信息：保存cookie/session
-                    cookie('admin_id',$info['admin_id']);
+                    cookie('id',$info['id']);
                     session('admin_info',$info);
 
                     $this->ajaxReturn(array('res'=>1,'info'=>$info));
