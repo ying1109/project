@@ -34,12 +34,3 @@ $(document).ready(function () {
         }
     });
 });
-
-/*$(document).ready(function () {
-    $('.menu_above li a').click(function () {
-        var parent = $(this).parent().parent();
-        parent.find('li a').css('color', '#337AB7');
-        $(this).css({'color': '#FF0000'});
-
-    })
-})*/
