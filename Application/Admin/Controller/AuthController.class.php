@@ -33,11 +33,6 @@ class AuthController extends BaseController {
 
         $map['id']     = I('id', 0);
         $info          = $Admin->info($map);
-        if (!$info) {
-            $info['s_province'] = '省份';
-            $info['s_city']     = '地级市';
-            $info['s_county']   = '市、县级市';
-        }
 
         $this->assign('info', $info);
 
