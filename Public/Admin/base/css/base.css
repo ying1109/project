@@ -213,6 +213,21 @@ a {
 .page_content>.header_default {
     font-size: 22px;
 }
+.menu_above {
+    padding: 10px 0 0 10px !important;
+    font-size: 16px;
+}
+.menu_above>li {
+    display: inline-block;
+    /*border: 1px solid red;*/
+}
+.menu_above>li>a.active,
+.menu_above>li>a:hover {
+    color: #ff0000;
+}
+.menu_above>li.line {
+    margin: 0 10px;
+}
 
 /*header*/
 .breadcrumb {

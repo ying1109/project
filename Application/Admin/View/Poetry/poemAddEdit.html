@@ -9,8 +9,26 @@
 <block name="main_content">
     <div class="panel panel-default">
         <div class="panel-body">
-            <form class="form-horizontal" method="POST" action="">
+            <form class="form-horizontal" method="POST" action="" onsubmit="return checkForm()">
                 <input type="hidden" name="id" value="{$info['id']}">
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">类型：</label>
+                    <div class="col-sm-6">
+                        <label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio1" value="1">诗
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio2" value="2">词
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio3" value="3">歌
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio4" value="4">赋
+                        </label>
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">名字：</label>
@@ -60,5 +78,13 @@
 
 
 <block name="other_script">
-
+<script type="text/javascript">
+    $('.btn-primary').click(function () {
+        var val = $("input[name='type']:checked").val();
+        if (!val) {
+            alert('请选择类型！');
+            return false;
+        }
+    })
+</script>
 </block>

@@ -1,65 +1,65 @@
 <div id="navMenubox">
 	<ul class="navMenu">
 		<li> 
-		    <a href="{:U('Index/index')}" <if condition="CONTROLLER_NAME == 'Index'"> class="active" </if> >
+		    <a href="{:U('Index/index')}" <if condition="CONTROLLER_NAME eq 'Index'"> class="active" </if> >
 		        <i class="fa fa-user"></i>
 		        <span>个人中心</span>
 		    </a> 
 		</li>
 
 	    <li>
-	        <a href="javascript:;" <if condition="CONTROLLER_NAME == Poetry">class="active"</if> >
+	        <a href="javascript:;" <if condition="CONTROLLER_NAME eq Poetry">class="active"</if> >
 	            <i class="fa fa-user"></i>
 	            <span class="">诗词歌赋</span>
 	            <span class="arrow"></span>
 	        </a>
-	        <ul class="sub-menu"  <if condition="CONTROLLER_NAME == Poetry">style="display: block;"</if>>
+	        <ul class="sub-menu"  <if condition="CONTROLLER_NAME eq Poetry">style="display: block;"</if>>
 	            <li>
-					<a href="{:U('Poetry/poem')}" <if condition="$_SERVER['PATH_INFO'] == 'Poetry/poem'">class="active"</if>>诗</a>
+					<a href="{:U('Poetry/poem')}" <if condition="$url eq 'Poetry/poem'">class="active"</if>>诗</a>
 				</li>
 	            <li>
-					<a href="{:U('Poetry/ci')}" <if condition="$_SERVER['PATH_INFO'] == 'Poetry/ci'">class="active"</if>>词</a>
+					<a href="{:U('Poetry/ci')}" <if condition="$url eq 'Poetry/ci'">class="active"</if>>词</a>
 				</li>
 	            <li>
-					<a href="{:U('Poetry/song')}" <if condition="$_SERVER['PATH_INFO'] == 'Poetry/song'">class="active"</if>>歌</a>
+					<a href="{:U('Poetry/song')}" <if condition="$url eq 'Poetry/song'">class="active"</if>>歌</a>
 				</li>
 	            <li>
-					<a href="{:U('Poetry/fu')}" <if condition="$_SERVER['PATH_INFO'] == 'Poetry/fu'">class="active"</if>>赋</a>
+					<a href="{:U('Poetry/fu')}" <if condition="$url eq 'Poetry/fu'">class="active"</if>>赋</a>
 				</li>
 	        </ul>
 	    </li>
 
 	    <li>
-	        <a href="javascript:;" <if condition="CONTROLLER_NAME == Auth">class="active"</if> >
+	        <a href="javascript:;" <if condition="CONTROLLER_NAME eq Auth">class="active"</if> >
 	            <i class="fa fa-user"></i>
 	            <span class="">权限管理</span>
 	            <span class="arrow"></span>
 	        </a>
-	        <ul class="sub-menu"  <if condition="CONTROLLER_NAME == Auth">style="display: block;"</if>>
+	        <ul class="sub-menu"  <if condition="CONTROLLER_NAME eq Auth">style="display: block;"</if>>
 	            <li>
-					<a href="{:U('Auth/myAuth')}" <if condition="$_SERVER['PATH_INFO'] == 'Auth/myAuth'">class="active"</if>>我的权限</a>
+					<a href="{:U('Auth/myAuth')}" <if condition="$url eq 'Auth/myAuth'">class="active"</if>>我的权限</a>
 				</li>
 	            <li>
-					<a href="{:U('Auth/admin')}" <if condition="$_SERVER['PATH_INFO'] == 'Auth/admin'">class="active"</if>>管理员</a>
+					<a href="{:U('Auth/admin')}" <if condition="$url eq 'Auth/admin'">class="active"</if>>管理员</a>
 				</li>
 	            <li>
-					<a href="{:U('Auth/resetPwd')}" <if condition="$_SERVER['PATH_INFO'] == 'Auth/resetPwd'">class="active"</if>>安全设置</a>
+					<a href="{:U('Auth/resetPwd')}" <if condition="$url eq 'Auth/resetPwd'">class="active"</if>>安全设置</a>
 				</li>
 	        </ul>
 	    </li>
 
 		<li>
-			<a href="javascript:;" <if condition="CONTROLLER_NAME == System">class="active"</if> >
+			<a href="javascript:;" <if condition="CONTROLLER_NAME eq System">class="active"</if> >
 			<i class="fa fa-user"></i>
 			<span class="">系统设置</span>
 			<span class="arrow"></span>
 			</a>
-			<ul class="sub-menu"  <if condition="CONTROLLER_NAME == System">style="display: block;"</if>>
+			<ul class="sub-menu"  <if condition="CONTROLLER_NAME eq System">style="display: block;"</if>>
 				<li>
-					<a href="{:U('System/aboutUs')}" <if condition="$_SERVER['PATH_INFO'] == 'System/aboutUs'">class="active"</if>>关于我们</a>
+					<a href="{:U('System/aboutUs')}" <if condition="$url eq 'System/aboutUs'">class="active"</if>>关于我们</a>
 				</li>
 				<li>
-					<a href="{:U('System/banner')}" <if condition="$_SERVER['PATH_INFO'] == 'System/banner'">class="active"</if>>轮播图</a>
+					<a href="{:U('System/banner')}" <if condition="$url eq 'System/banner'">class="active"</if>>轮播图</a>
 				</li>
 			</ul>
 		</li>

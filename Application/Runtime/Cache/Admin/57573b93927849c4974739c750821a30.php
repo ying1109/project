@@ -29,6 +29,8 @@
 	<div id="right">
 		<ul>
 			<li><span><?php echo ($admin["nickname"]); ?></span></li>
+			<li><span><?php echo ($url); ?></span></li>
+			<li><span><?php echo ($admin["nickname"]); ?></span></li>
 			<li>
 				<a href="<?php echo U('Login/loginOut');?>">
 					<i class="fa fa-power-off fa-lg"></i>
@@ -60,16 +62,16 @@
 	        </a>
 	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Poetry): ?>style="display: block;"<?php endif; ?>>
 	            <li>
-					<a href="<?php echo U('Poetry/poem');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/poem'): ?>class="active"<?php endif; ?>>诗</a>
+					<a href="<?php echo U('Poetry/poem');?>" <?php if($url == 'Poetry/poem'): ?>class="active"<?php endif; ?>>诗</a>
 				</li>
 	            <li>
-					<a href="<?php echo U('Poetry/ci');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/ci'): ?>class="active"<?php endif; ?>>词</a>
+					<a href="<?php echo U('Poetry/ci');?>" <?php if($url == 'Poetry/ci'): ?>class="active"<?php endif; ?>>词</a>
 				</li>
 	            <li>
-					<a href="<?php echo U('Poetry/song');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/song'): ?>class="active"<?php endif; ?>>歌</a>
+					<a href="<?php echo U('Poetry/song');?>" <?php if($url == 'Poetry/song'): ?>class="active"<?php endif; ?>>歌</a>
 				</li>
 	            <li>
-					<a href="<?php echo U('Poetry/fu');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/fu'): ?>class="active"<?php endif; ?>>赋</a>
+					<a href="<?php echo U('Poetry/fu');?>" <?php if($url == 'Poetry/fu'): ?>class="active"<?php endif; ?>>赋</a>
 				</li>
 	        </ul>
 	    </li>
@@ -82,13 +84,13 @@
 	        </a>
 	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Auth): ?>style="display: block;"<?php endif; ?>>
 	            <li>
-					<a href="<?php echo U('Auth/myAuth');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/myAuth'): ?>class="active"<?php endif; ?>>我的权限</a>
+					<a href="<?php echo U('Auth/myAuth');?>" <?php if($url == 'Auth/myAuth'): ?>class="active"<?php endif; ?>>我的权限</a>
 				</li>
 	            <li>
-					<a href="<?php echo U('Auth/admin');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/admin'): ?>class="active"<?php endif; ?>>管理员</a>
+					<a href="<?php echo U('Auth/admin');?>" <?php if($url == 'Auth/admin'): ?>class="active"<?php endif; ?>>管理员</a>
 				</li>
 	            <li>
-					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>
+					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($url == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>
 				</li>
 	        </ul>
 	    </li>
@@ -101,10 +103,10 @@
 			</a>
 			<ul class="sub-menu"  <?php if(CONTROLLER_NAME == System): ?>style="display: block;"<?php endif; ?>>
 				<li>
-					<a href="<?php echo U('System/aboutUs');?>" <?php if($_SERVER['PATH_INFO'] == 'System/aboutUs'): ?>class="active"<?php endif; ?>>关于我们</a>
+					<a href="<?php echo U('System/aboutUs');?>" <?php if($url == 'System/aboutUs'): ?>class="active"<?php endif; ?>>关于我们</a>
 				</li>
 				<li>
-					<a href="<?php echo U('System/banner');?>" <?php if($_SERVER['PATH_INFO'] == 'System/banner'): ?>class="active"<?php endif; ?>>轮播图</a>
+					<a href="<?php echo U('System/banner');?>" <?php if($url == 'System/banner'): ?>class="active"<?php endif; ?>>轮播图</a>
 				</li>
 			</ul>
 		</li>

@@ -29,6 +29,8 @@
 	<div id="right">
 		<ul>
 			<li><span><?php echo ($admin["nickname"]); ?></span></li>
+			<li><span><?php echo ($url); ?></span></li>
+			<li><span><?php echo ($admin["nickname"]); ?></span></li>
 			<li>
 				<a href="<?php echo U('Login/loginOut');?>">
 					<i class="fa fa-power-off fa-lg"></i>
@@ -60,7 +62,7 @@
 	        </a>
 	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Poetry): ?>style="display: block;"<?php endif; ?>>
 	            <li>
-					<a href="<?php echo U('Poetry/poem');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/poem'): ?>class="active"<?php endif; ?>>诗</a>
+					<a href="<?php echo U('Poetry/poem');?>" <?php if($url == 'Poetry/poem'): ?>class="active"<?php endif; ?>>诗</a>
 				</li>
 	            <li>
 					<a href="<?php echo U('Poetry/ci');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/ci'): ?>class="active"<?php endif; ?>>词</a>
@@ -85,7 +87,7 @@
 					<a href="<?php echo U('Auth/myAuth');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/myAuth'): ?>class="active"<?php endif; ?>>我的权限</a>
 				</li>
 	            <li>
-					<a href="<?php echo U('Auth/admin');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/admin'): ?>class="active"<?php endif; ?>>管理员</a>
+					<a href="<?php echo U('Auth/admin');?>" <?php if($url == 'Auth/admin'): ?>class="active"<?php endif; ?>>管理员</a>
 				</li>
 	            <li>
 					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>
@@ -142,8 +144,26 @@
 		
     <div class="panel panel-default">
         <div class="panel-body">
-            <form class="form-horizontal" method="POST" action="">
+            <form class="form-horizontal" method="POST" action="" onsubmit="return checkForm()">
                 <input type="hidden" name="id" value="<?php echo ($info['id']); ?>">
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">类型：</label>
+                    <div class="col-sm-6">
+                        <label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio1" value="1">诗
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio2" value="2">词
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio3" value="3">歌
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio4" value="4">赋
+                        </label>
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">名字：</label>
@@ -204,7 +224,15 @@
 
 <!--底部引入其他js文件-->
 
-
+<script type="text/javascript">
+    $('.btn-primary').click(function () {
+        var val = $("input[name='type']:checked").val();
+        if (!val) {
+            alert('请选择类型！');
+            return false;
+        }
+    })
+</script>
 
 
 </body>

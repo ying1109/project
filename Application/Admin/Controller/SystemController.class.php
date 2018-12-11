@@ -6,6 +6,8 @@ header('content-type:text/html; charset=utf-8');
 class SystemController extends BaseController {
     //关于我们
     public function aboutUs(){
+        $url = CONTROLLER_NAME . '/' . 'aboutUs';
+        $this->assign('url', $url);
     	$one = array('name'=>'系统设置','value'=>U('System/aboutUs'));
     	$two = array('name'=>'关于我们','value'=>U('System/aboutUs'));
     	$this->assign("one",$one);
@@ -36,6 +38,8 @@ class SystemController extends BaseController {
     
     //轮播图
     public function banner() {
+        $url = CONTROLLER_NAME . '/' . 'banner';
+        $this->assign('url', $url);
         $one = array('name'=>'系统设置','value'=>U('System/banner'));
         $two = array('name'=>'轮播图管理','value'=>U('System/banner'));
         $this->assign("one",$one);
@@ -54,6 +58,8 @@ class SystemController extends BaseController {
     
     //轮播图添加编辑
     public function bannerAddEdit() {
+        $url = CONTROLLER_NAME . '/' . 'banner';
+        $this->assign('url', $url);
         $one   = array('name' => '系统设置', 'value' => U('System/banner'));
         $two   = array('name' => '轮播图管理', 'value' => U('System/banner'));
         $three = array('name' => '添加', 'value'=>U('System/bannerAdd'));

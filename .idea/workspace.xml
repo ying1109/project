@@ -29,40 +29,40 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="13" />
+          <entry key="css" value="16" />
           <entry key="htaccess" value="2" />
-          <entry key="html" value="62" />
-          <entry key="js" value="9" />
-          <entry key="php" value="51" />
+          <entry key="html" value="72" />
+          <entry key="js" value="12" />
+          <entry key="php" value="65" />
           <entry key="sql" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="13" />
-          <entry key="HTML" value="62" />
-          <entry key="JavaScript" value="9" />
-          <entry key="PHP" value="51" />
+          <entry key="CSS" value="16" />
+          <entry key="HTML" value="72" />
+          <entry key="JavaScript" value="12" />
+          <entry key="PHP" value="65" />
           <entry key="SQL" value="3" />
           <entry key="htaccess" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="714" />
+          <entry key="css" value="856" />
           <entry key="dummy" value="10" />
-          <entry key="html" value="3681" />
-          <entry key="js" value="179" />
-          <entry key="php" value="3437" />
+          <entry key="html" value="4032" />
+          <entry key="js" value="381" />
+          <entry key="php" value="4118" />
           <entry key="sql" value="212" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="714" />
-          <entry key="HTML" value="3681" />
-          <entry key="JavaScript" value="179" />
-          <entry key="PHP" value="3437" />
+          <entry key="CSS" value="856" />
+          <entry key="HTML" value="4032" />
+          <entry key="JavaScript" value="381" />
+          <entry key="PHP" value="4118" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="212" />
         </counts>
@@ -80,75 +80,52 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/PoetryController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="27" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="17" selection-end-column="27" />
+            <state relative-caret-position="484">
+              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/AjaxController.class.php">
+        <entry file="file://$PROJECT_DIR$/Public/Admin/base/js/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+            <state relative-caret-position="537">
+              <caret line="44" column="4" selection-start-line="37" selection-end-line="44" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Poetry/menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="4" column="97" selection-start-line="4" selection-start-column="91" selection-end-line="4" selection-end-column="97" />
+              <caret line="9" column="97" selection-start-line="9" selection-start-column="91" selection-end-line="9" selection-end-column="97" />
+              <caret line="14" column="97" selection-start-line="14" selection-start-column="91" selection-end-line="14" selection-end-column="97" />
+              <caret line="19" column="97" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Base/left.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/Admin/base/css/base.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="226" selection-start-line="226" selection-end-line="226" />
               <folding>
-                <element signature="e#169#1096#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Poetry/poem.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="977">
-              <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/SystemController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Auth/admin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Auth/adminAddEdit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="157" column="53" selection-start-line="149" selection-start-column="8" selection-end-line="157" selection-end-column="53" />
-              <folding>
-                <element signature="e#2349#2355#0" expanded="true" />
-                <element signature="n#div#1;n#block#1;n#!!top" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#block#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/View/System/aboutUs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="e#3942#4095#0" />
               </folding>
             </state>
           </provider>
@@ -161,7 +138,6 @@
       <find>script</find>
       <find>shadow</find>
       <find>box-shadow</find>
-      <find>active</find>
       <find>$data</find>
       <find>:U(</find>
       <find>meunBox</find>
@@ -174,7 +150,14 @@
       <find>ajax</find>
       <find>U(</find>
       <find>img src</find>
+      <find>act</find>
+      <find>active</find>
+      <find>myAuth</find>
+      <find>==</find>
     </findStrings>
+    <replaceStrings>
+      <replace>eq</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -189,37 +172,40 @@
         <option value="$PROJECT_DIR$/Application/Admin/Model/BannerModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/System/bannerAdd.html" />
         <option value="$PROJECT_DIR$/Public/Admin/webuploader/style.css" />
-        <option value="$PROJECT_DIR$/Public/Admin/base/js/base.js" />
         <option value="$PROJECT_DIR$/Readme/template/list.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Auth/adminAdd.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/System/banner.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/Controller/SystemController.class.php" />
         <option value="$PROJECT_DIR$/Readme/template/bannerAddEdit.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/UploadController.class.php" />
         <option value="$PROJECT_DIR$/Application/Runtime/Cache/Admin/570ae7973d58f77a3f5ecdd9d3c49818.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Model/AdminModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/Base/left.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/Base/top.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/LoginController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Login/login.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Auth/resetPwd.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/System/bannerAddEdit.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/Controller/AuthController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Auth/adminAddEdit.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Model/ScgfModel.class.php" />
         <option value="$PROJECT_DIR$/Readme/sql.sql" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Poetry/admin.html" />
-        <option value="$PROJECT_DIR$/Public/Admin/base/css/base.css" />
         <option value="$PROJECT_DIR$/Application/Admin/View/System/aboutUs.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/Poetry/poemAddEdit.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Poetry/poemDetail.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Index/index.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Auth/admin.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/AjaxController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/Model/TestModel.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Poetry/poemAddEdit.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Poetry/poem.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Base/top.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/Common/function.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/Controller/AuthController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/Controller/SystemController.class.php" />
+        <option value="$PROJECT_DIR$/Public/Admin/base/js/base.js" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Poetry/menu.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Base/left.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/PoetryController.class.php" />
+        <option value="$PROJECT_DIR$/Public/Admin/base/css/base.css" />
       </list>
     </option>
   </component>
@@ -229,7 +215,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -284,13 +270,6 @@
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
               <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -300,14 +279,6 @@
               <item name="Admin" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
               <item name="Base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="System" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,9 +296,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\www\project\Application\Admin\Model" />
       <recent name="G:\www\project\Application\Admin\View\Poetry" />
       <recent name="G:\www\project\Application\Admin\View" />
-      <recent name="G:\www\project\Application\Admin\Model" />
       <recent name="G:\www\project\Application\Admin\Controller" />
       <recent name="G:\www\project\Application\Admin\View\Auth" />
     </key>
@@ -368,13 +339,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97598000" />
+    <option name="totallyTimeSpent" value="112952000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1913767" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19472913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -388,7 +359,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3296355" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -444,13 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Admin/base/js/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Admin/webuploader/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -482,36 +446,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Base/left.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="45" column="106" selection-start-line="45" selection-start-column="98" selection-end-line="45" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Base/top.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Admin/login/js/controlLogin.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/LoginController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Login/login.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -520,20 +456,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/UploadController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-189">
           <caret line="43" column="39" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="39" />
-          <folding>
-            <element signature="e#170#1709#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -541,17 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="267" column="64" selection-start-line="267" selection-start-column="26" selection-end-line="267" selection-end-column="64" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#block#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/AuthController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -563,34 +478,6 @@
           <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
           <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/AboutUsModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/AdminModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="35" column="80" selection-start-line="35" selection-start-column="80" selection-end-line="35" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Admin/base/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/SystemController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -611,24 +498,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Poetry/poemAddEdit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="26" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="5" column="90" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -636,13 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
           <caret line="59" column="99" selection-start-line="59" selection-start-column="99" selection-end-line="59" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Base/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="52" column="25" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -660,22 +526,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Auth/adminAddEdit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="157" column="53" selection-start-line="149" selection-start-column="8" selection-end-line="157" selection-end-column="53" />
-          <folding>
-            <element signature="e#2349#2355#0" expanded="true" />
-            <element signature="n#div#1;n#block#1;n#!!top" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#block#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Auth/resetPwd.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="779">
           <caret line="70" column="10" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="70" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/TestModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -689,17 +554,141 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Poetry/poemAddEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Base/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Base/top.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/AboutUsModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/AdminModel.class.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Auth/adminAddEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="e#2343#2349#0" expanded="true" />
+            <element signature="e#2349#2355#0" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#2;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#block#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Common/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/SystemController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/AuthController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1421" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/LoginController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Poetry/poem.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="977">
-          <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+        <state relative-caret-position="132">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Admin/base/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="44" column="4" selection-start-line="37" selection-end-line="44" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/PoetryController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="17" selection-end-column="27" />
+        <state relative-caret-position="484">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Poetry/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="4" column="97" selection-start-line="4" selection-start-column="91" selection-end-line="4" selection-end-column="97" />
+          <caret line="9" column="97" selection-start-line="9" selection-start-column="91" selection-end-line="9" selection-end-column="97" />
+          <caret line="14" column="97" selection-start-line="14" selection-start-column="91" selection-end-line="14" selection-end-column="97" />
+          <caret line="19" column="97" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Base/left.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Admin/base/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="226" selection-start-line="226" selection-end-line="226" />
+          <folding>
+            <element signature="e#3942#4095#0" />
+          </folding>
         </state>
       </provider>
     </entry>

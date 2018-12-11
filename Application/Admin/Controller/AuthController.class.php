@@ -7,6 +7,8 @@ header('Content-type:text/html; charset=utf-8');
 class AuthController extends BaseController {
     //管理员
     public function admin() {
+        $url = CONTROLLER_NAME . '/' . 'admin';
+        $this->assign('url', $url);
         $one = array('name' => '权限管理', 'value' => U('Auth/admin'));
         $two = array('name' => '管理员', 'value' => U('Auth/admin'));
         $this->assign("one", $one);
@@ -22,6 +24,8 @@ class AuthController extends BaseController {
 
     //管理员添加
     public function adminAddEdit() {
+        $url = CONTROLLER_NAME . '/' . 'admin';
+        $this->assign('url', $url);
         $one   = array('name' => '权限管理', 'value' => U('Auth/admin'));
         $two   = array('name' => '管理员', 'value' => U('Auth/admin'));
         $three = array('name' => '管理员添加', 'value' => U('Auth/adminAddEdit'));
@@ -67,7 +71,12 @@ class AuthController extends BaseController {
     
     //安全设置
     public function resetPwd() {
-
+        $url = CONTROLLER_NAME . '/' . 'admin';
+        $this->assign('url', $url);
+        $one   = array('name' => '权限管理', 'value' => U('Auth/resetPwd'));
+        $two   = array('name' => '安全设置', 'value' => U('Auth/resetPwd'));
+        $this->assign("one", $one);
+        $this->assign("two", $two);
 
         $this->display();
     }

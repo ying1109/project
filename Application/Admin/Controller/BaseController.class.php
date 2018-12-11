@@ -10,7 +10,7 @@ class BaseController extends Controller {
         //判断是否登录
         $admin_id = $_COOKIE["id"];
         if(!$admin_id){
-            $this->redirect('Login/login');
+            $this->error('您尚未登陆，正在跳转至登陆页面', U('Login/login'));
         }
 
         $admin_info = session('admin_info');
