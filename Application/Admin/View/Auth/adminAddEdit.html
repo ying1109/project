@@ -150,12 +150,14 @@
         var s_province = "{$info['s_province']}";
         var s_city     = "{$info['s_city']}";
         var s_county   = "{$info['s_county']}";
-        $("#s_province option:selected").html(s_province);
-        $("#s_city option:selected").html(s_city);
-        $("#s_county option:selected").html(s_county);
-        $("#s_province option:selected").val(s_province);
-        $("#s_city option:selected").val(s_city);
-        $("#s_county option:selected").val(s_county);
+        if (s_province) {
+            $("#s_province option:selected").html(s_province);
+            $("#s_city option:selected").html(s_city);
+            $("#s_county option:selected").html(s_county);
+            $("#s_province option:selected").val(s_province);
+            $("#s_city option:selected").val(s_city);
+            $("#s_county option:selected").val(s_county);
+        }
     </script>
     <!--头像上传-->
     <script type="text/javascript" charset="utf-8" src="/Public/Admin/webuploader/webuploader.js"></script>
