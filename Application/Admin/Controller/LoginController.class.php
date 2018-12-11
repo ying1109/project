@@ -21,7 +21,7 @@ class LoginController extends Controller {
             $this->ajaxReturn(array('res'=>0,'msg'=>'账号、密码、验证码不能为空！'));
         } else {
             if ($code_input == $code_admin) {
-                $password = md5($account) . md5($password);
+                $password = md5(md5($account) . md5($password));
                 $info     = M('Admin')->where(array('username'=>$account,'password_md5'=>$password))->find();
                 if (!$info) {
                     $this->ajaxReturn(array('res'=>0,'msg'=>'账号或密码错误'));
