@@ -31,8 +31,8 @@ class AuthController extends BaseController {
 
         $Admin = D('Admin');
 
-        $map['id']     = I('id', 0);
-        $info          = $Admin->info($map);
+        $map['id'] = I('id', 0);
+        $info      = $Admin->info($map);
 
         $this->assign('info', $info);
 
