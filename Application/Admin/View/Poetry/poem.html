@@ -20,7 +20,6 @@
                         <th>内容</th>
                         <th>创作背景</th>
                         <th>创建时间</th>
-                        <!--<th>更新时间</th>-->
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -34,7 +33,6 @@
                             <td>{$v.content|substr = 0, 30}</td>
                             <td>{$v.detail|substr = 0, 30}</td>
                             <td>{$v.create_time|date = 'Y-m-d H:i:s', ###}</td>
-                            <!--<td>{$v.update_time|date = 'Y-m-d H:i:s', ###}</td>-->
                             <td>
                                 <a class="btn btn-info btn-xs" href="{:U('Poetry/poemDetail', array('id'=>$v['id']))}">查看</a>
                                 <a class="btn btn-success btn-xs" href="{:U('Poetry/poemAddEdit', array('id'=>$v['id']))}">编辑</a>
@@ -44,6 +42,7 @@
                     </tbody>
                 </volist>
             </table>
+            {$page}
         </div>
     </div>
 </block>
@@ -53,25 +52,27 @@
 <block name="other_script">
     <script type="text/javascript">
         $('.btn-danger').click(function () {
-            var id = $(this).attr('name');
+            if (confirm('确定删除吗？')) {
+                var id = $(this).attr('name');
 
-            $.ajax({
-                url: "{:U('Ajax/poemDel')}",
-                type: 'post',
-                dataType: 'json',
-                data: {
-                    id: id,
-                },
-                success: function (data) {
-                    if (data.res == 1) {
-                        alert(data.msg);
-                        var url = "{:U('poem')}";
-                        location.href = url;
-                    } else {
-                        alert(data.msg);
+                $.ajax({
+                    url: "{:U('Ajax/poemDel')}",
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        id: id,
+                    },
+                    success: function (data) {
+                        if (data.res == 1) {
+                            alert(data.msg);
+                            var url = "{:U('poem')}";
+                            location.href = url;
+                        } else {
+                            alert(data.msg);
+                        }
                     }
-                }
-            })
+                })
+            }
         })
     </script>
 </block>

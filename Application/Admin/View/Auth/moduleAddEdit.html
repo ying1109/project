@@ -1,0 +1,45 @@
+<extend name="Base:base" />
+
+<block name="other_css">
+    <link type="text/css" href="/Public/Admin/webuploader/webuploader.css" rel="stylesheet" />
+    <link type="text/css" href="/Public/Admin/webuploader/style.css" rel="stylesheet" />
+</block>
+
+<!-- 内容结束开始 -->
+<block name="main_content">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form-horizontal" method="POST" action="">
+                <input type="hidden" name="id" value="{$info['id']}">
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">父级模块：</label>
+                    <div class="col-sm-6">
+                        <select class="form-control" name="pid">
+                            <option value="0">顶级模块</option>
+                            <volist name="list" id="v">
+                                <option value="{$v.id}" <if condition="$v.id eq $info['pid']">selected</if>><if condition="$v.name neq ''">&nbsp;-->&nbsp;</if>{$v.name}</option>
+                            </volist>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">模块名称：</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="name" value="{$info.name}" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4">
+                        <button type="submit" class="btn btn-primary">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</block>
+<!-- 内容结束结束 -->
+
+<block name="other_script"></block>

@@ -7,6 +7,7 @@ li {
 }
 a {
 	text-decoration: none !important;
+    background: #3697FF;
 	/*color: #3697FF !important;*/
 }
 
@@ -15,13 +16,14 @@ a {
     position: fixed;
 	width: 100%;
 	height: 60px;
+    top: 0;
 	color: #FFFFFF;
 	background: #3697FF;
 	box-shadow: 1px 0 15px #666363;
     z-index: 500;
 }
 #top #left {
-	width: 19%;
+	width: 250px;
 	height: 60px;
 	line-height: 60px;
 	text-align: center;
@@ -78,9 +80,9 @@ a {
 /*========== left ==========*/
 /* navMenu */
 #navMenubox { 
-    background: #1C2229;
+    background: #373F45;
     position: fixed;
-    width: 19%;
+    width: 250px;
     top: 0px;
     bottom: 0px;
 }
@@ -109,7 +111,7 @@ a {
     text-decoration: none; 
     font-size: 17px; 
     border-top: 1px solid #222932; 
-    border-bottom: 2px solid #191e24; 
+    border-bottom: 2px solid #373F45;
     padding-left: 25px;
     color: #CEC8C8 !important;
 }
@@ -201,12 +203,11 @@ a {
 
 /*===== page_content =====*/
 .page_content {
-    position: absolute;
-    float: right;
-    right: 0px;
-    bottom: 0px;
-    top: 60px;
-    width: 81%;
+    /*position: absolute;*/
+    /*float: left;*/
+    width: auto;
+    margin-top: 60px;
+    margin-left: 250px;
     padding: 10px;
     background: #F5F5F5;
 }

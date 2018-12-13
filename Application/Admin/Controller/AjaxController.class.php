@@ -51,6 +51,21 @@ class AjaxController extends BaseController {
             $this->ajaxReturn(array('res'=>1, 'msg'=>'删除成功！'));
         }
     }
+
+    // 模块删除
+    public function moduleDel() {
+        $AdminModule = D('AdminModule');
+
+        $map['id']      = I('id');
+        $data['status'] = -1;
+
+        $res = $AdminModule->update($map, $data);
+        if (!$res['status']) {
+            $this->ajaxReturn(array('res'=>0, 'msg'=>'删除失败！'));
+        } else {
+            $this->ajaxReturn(array('res'=>1, 'msg'=>'删除成功！'));
+        }
+    }
     
 
 }

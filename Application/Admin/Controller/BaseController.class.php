@@ -13,7 +13,7 @@ class BaseController extends Controller {
             $this->error('您尚未登陆，正在跳转至登陆页面', U('Login/login'));
         }
 
-        $admin_info = session('admin_info');
+        $admin_info = D('Admin')->info(array('id'=>$admin_id));
         $this->assign('admin', $admin_info);
     }
 }

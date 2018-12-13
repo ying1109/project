@@ -18,7 +18,21 @@ class PoetryController extends BaseController {
 
         $map['type']   = I('type', 1);
         $map['status'] = array('NEQ', -1);
-        $list = $Scgf->lists($map);
+
+        // 分页开始
+        // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
+        $count = M('Scgf')->where($map)->count();// 查询满足要求的总记录数
+        $Page  = new \Think\Page($count, 1);// 实例化分页类 传入总记录数和每页显示的记录数
+        $Page->setConfig('header','<li class="disabled hwh-page-info"><a>共<em>%TOTAL_ROW%</em>条  <em>%NOW_PAGE%</em>/%TOTAL_PAGE%</a></li>');
+        $Page->setConfig('prev','上一页');
+        $Page->setConfig('next','下一页');
+        $Page->setConfig('last','末页');
+        $Page->setConfig('first','首页');
+        $Page->setConfig('theme','%HEADER% %FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%');
+        $show = bootstrap_page_style($Page->show());// 分页显示输出
+        $this->assign('page',$show);// 赋值分页输出
+
+        $list = $Scgf->lists($map, $Page->firstRow, $Page->listRows);
 
         $this->assign('type', $map['type']);
         $this->assign('list', $list);

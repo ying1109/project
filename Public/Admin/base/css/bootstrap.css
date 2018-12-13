@@ -1097,7 +1097,8 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  /*color: #337ab7;*/
+  color: #399bff;
   text-decoration: none;
 }
 a:hover,
@@ -3115,8 +3116,9 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  /*background-color: #337ab7;*/
+  background-color: #399bff;
+  border-color: #399bff;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -5456,7 +5458,8 @@ button.list-group-item-danger.active:focus {
           box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
 .panel-body {
-  padding: 15px;
+  /*padding: 15px;*/
+  padding: 20px;
 }
 .panel-heading {
   padding: 10px 15px;

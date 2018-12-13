@@ -731,15 +731,8 @@
                         domInput.find(".file_path").val(filepath);
                         domInput.find(".file_title").val(title);
                         if (_this_upload_type == 'banner') {
-                            _this_upload.html( "<div class='flie-box col-sm-3'><div class='file-img'><img style='border: 1px solid #c1c1c1;'  src='"+
-                                response.file_info.file_path
-                                +"' onerror='javascript:this.src=\"/Public/Common/img/default.png\" ' /></div>" +
-                                "<div class='close-btn'><i class='fa fa-remove'></i></div><input name='post_banner' type='hidden' value='"+
-                                JSON.stringify( response.file_info.file_path )
-                                +"' /></div> " )
+                            _this_upload.html( "<div class='flie-box col-sm-3'><div class='file-img'><img style='border: 1px solid #c1c1c1;' src='" + response.file_info.file_path + "' onerror='javascript:this.src=\"/Public/Common/img/default.png\" ' /></div>" + "<div class='close-btn'><i class='fa fa-remove'></i></div><input name='post_banner' type='hidden' value='" + JSON.stringify( response.file_info.file_path ) + "' /></div> " )
                         }
-
-
                     } else {
                         alert(response.info);
                     };

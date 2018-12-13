@@ -1,13 +1,11 @@
-
-
 // 顶部点击展闭左侧导航栏
-$('#top_icon').mousedown(function(event) {
+$('#top_icon').click(function(event) {
 	if ($('#navMenubox').is(':hidden')) {
 		$('#navMenubox').show();
-		$('.page_content').css('width', '81%');
+		$('.page_content').css('margin-left', '250px');
 	} else {
 		$('#navMenubox').hide();
-		$('.page_content').css('width', '100%');
+		$('.page_content').css('margin-left', '0');
 	}
 });
 
@@ -34,3 +32,9 @@ $(document).ready(function () {
         }
     });
 });
+
+//页面内容背景
+$(document).ready(function () {
+    var height = $(window).height() - 60;
+    $('.page_content').css({'height': height, 'background': '#F5F5F5'});
+})

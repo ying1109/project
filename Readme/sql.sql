@@ -61,3 +61,30 @@ CREATE TABLE `scgf` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='诗词歌赋';
 
+-- 规则
+DROP TABLE IF EXISTS `admin_rule`;
+CREATE TABLE `admin_rule` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `module` varchar(255) DEFAULT NULL COMMENT '规则所属module',
+  `url` varchar(255) DEFAULT NULL COMMENT '规则唯一英文标识',
+  `name` varchar(255) DEFAULT NULL COMMENT '规则中文描述',
+  `condition` varchar(300) NOT NULL DEFAULT '' COMMENT '规则附加条件',
+  `status` int(1) DEFAULT '1' COMMENT '状态：1启用、-1禁用',
+  `create_time` int(11) DEFAULT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='规则';
+
+
+-- 模块
+DROP TABLE IF EXISTS `admin_module`;
+CREATE TABLE `admin_module` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '模块',
+  `name` varchar(255) DEFAULT NULL,
+  `pid` int(11) DEFAULT '0' COMMENT '父级id',
+  `status` int(4) DEFAULT '1' COMMENT '状态',
+  `create_time` int(11) DEFAULT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+

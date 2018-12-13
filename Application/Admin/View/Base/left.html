@@ -7,7 +7,7 @@
 		    </a> 
 		</li>
 
-	    <li>
+	    <!--<li>
 	        <a href="javascript:;" <if condition="CONTROLLER_NAME eq Poetry">class="active"</if> >
 	            <i class="fa fa-user"></i>
 	            <span class="">诗词歌赋</span>
@@ -27,7 +27,7 @@
 					<a href="{:U('Poetry/fu')}" <if condition="$url eq 'Poetry/fu'">class="active"</if>>赋</a>
 				</li>
 	        </ul>
-	    </li>
+	    </li>-->
 
 	    <li>
 	        <a href="javascript:;" <if condition="CONTROLLER_NAME eq Auth">class="active"</if> >
@@ -41,6 +41,12 @@
 				</li>
 	            <li>
 					<a href="{:U('Auth/admin')}" <if condition="$url eq 'Auth/admin'">class="active"</if>>管理员</a>
+				</li>
+	            <li>
+					<a href="{:U('Auth/module')}" <if condition="$url eq 'Auth/module'">class="active"</if>>模块管理</a>
+				</li>
+	            <li>
+					<a href="{:U('Auth/rule')}" <if condition="$url eq 'Auth/rule'">class="active"</if>>规则管理</a>
 				</li>
 	            <li>
 					<a href="{:U('Auth/resetPwd')}" <if condition="$url eq 'Auth/resetPwd'">class="active"</if>>安全设置</a>

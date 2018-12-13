@@ -1,0 +1,68 @@
+<!-- <a href="{:U('Index/index')}" title="">我我我我我我我我我我</a> -->
+<extend name="Base:base" />
+
+<block name="other_css"></block>
+
+<!-- 内容结束开始 -->
+<block name="main_content">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <a href="{:U('moduleAddEdit')}" class="btn btn-primary">添加编辑</a>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>父级模块</th>
+                        <th>模块名称</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <volist name="list" id="v">
+                    <tbody>
+                        <tr>
+                            <td>{$v.id}</td>
+                            <td>{$v.pid|getNameById}</td>
+                            <td>{$v.name}</td>
+                            <td>
+                                <a class="btn btn-success btn-xs" href="{:U('moduleAddEdit', array('id'=>$v['id']))}">编辑</a>
+                                <a class="btn btn-danger btn-xs" href="#" name="{$v['id']}">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </volist>
+            </table>
+            {$page}
+        </div>
+    </div>
+</block>
+<!-- 内容结束结束 -->
+
+<block name="other_script">
+    <script type="text/javascript">
+        $('.btn-danger').click(function () {
+            if (confirm('确定删除吗？')) {
+                var id = $(this).attr('name');
+
+                $.ajax({
+                    url: "{:U('Ajax/moduleDel')}",
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        id: id,
+                    },
+                    success: function (data) {
+                        if (data.res == 1) {
+                            alert(data.msg);
+                            var url = "{:U('module')}";
+                            location.href = url;
+                        } else {
+                            alert(data.msg);
+                        }
+                    }
+                })
+            }
+        })
+    </script>
+</block>
