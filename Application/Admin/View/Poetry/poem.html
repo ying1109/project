@@ -4,11 +4,13 @@
 
 <!-- 内容结束开始 -->
 <block name="main_content">
-    <include file="menu" />
     <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <include file="menu" />
+        </div>
         <div class="panel-body">
             <div class="form-group">
-                <a href="{:U('poemAddEdit')}" class="btn btn-primary">添加编辑</a>
+                <a href="{:U('poemAddEdit', array('type'=>$type))}" class="btn btn-primary">添加编辑</a>
             </div>
             <table class="table table-hover">
                 <thead>
@@ -34,8 +36,8 @@
                             <td>{$v.detail|substr = 0, 30}</td>
                             <td>{$v.create_time|date = 'Y-m-d H:i:s', ###}</td>
                             <td>
-                                <a class="btn btn-info btn-xs" href="{:U('Poetry/poemDetail', array('id'=>$v['id']))}">查看</a>
-                                <a class="btn btn-success btn-xs" href="{:U('Poetry/poemAddEdit', array('id'=>$v['id']))}">编辑</a>
+                                <a class="btn btn-info btn-xs" href="{:U('Poetry/poemDetail', array('id'=>$v['id'], 'type'=>$type))}">查看</a>
+                                <a class="btn btn-success btn-xs" href="{:U('Poetry/poemAddEdit', array('id'=>$v['id'], 'type'=>$type))}">编辑</a>
                                 <a class="btn btn-danger btn-xs" name="{$v.id}" href="#">删除</a>
                             </td>
                         </tr>

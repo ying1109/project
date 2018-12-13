@@ -52,7 +52,7 @@
 		    </a> 
 		</li>
 
-	    <!--<li>
+	    <li>
 	        <a href="javascript:;" <?php if(CONTROLLER_NAME == Poetry): ?>class="active"<?php endif; ?> >
 	            <i class="fa fa-user"></i>
 	            <span class="">诗词歌赋</span>
@@ -72,7 +72,7 @@
 					<a href="<?php echo U('Poetry/fu');?>" <?php if($url == 'Poetry/fu'): ?>class="active"<?php endif; ?>>赋</a>
 				</li>
 	        </ul>
-	    </li>-->
+	    </li>
 
 	    <li>
 	        <a href="javascript:;" <?php if(CONTROLLER_NAME == Auth): ?>class="active"<?php endif; ?> >

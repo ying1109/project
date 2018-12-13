@@ -29,8 +29,6 @@
 	<div id="right">
 		<ul>
 			<li><span><?php echo ($admin["nickname"]); ?></span></li>
-			<li><span><?php echo ($url); ?></span></li>
-			<li><span><?php echo ($admin["nickname"]); ?></span></li>
 			<li>
 				<a href="<?php echo U('Login/loginOut');?>">
 					<i class="fa fa-power-off fa-lg"></i>
@@ -65,13 +63,13 @@
 					<a href="<?php echo U('Poetry/poem');?>" <?php if($url == 'Poetry/poem'): ?>class="active"<?php endif; ?>>诗</a>
 				</li>
 	            <li>
-					<a href="<?php echo U('Poetry/ci');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/ci'): ?>class="active"<?php endif; ?>>词</a>
+					<a href="<?php echo U('Poetry/ci');?>" <?php if($url == 'Poetry/ci'): ?>class="active"<?php endif; ?>>词</a>
 				</li>
 	            <li>
-					<a href="<?php echo U('Poetry/song');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/song'): ?>class="active"<?php endif; ?>>歌</a>
+					<a href="<?php echo U('Poetry/song');?>" <?php if($url == 'Poetry/song'): ?>class="active"<?php endif; ?>>歌</a>
 				</li>
 	            <li>
-					<a href="<?php echo U('Poetry/fu');?>" <?php if($_SERVER['PATH_INFO'] == 'Poetry/fu'): ?>class="active"<?php endif; ?>>赋</a>
+					<a href="<?php echo U('Poetry/fu');?>" <?php if($url == 'Poetry/fu'): ?>class="active"<?php endif; ?>>赋</a>
 				</li>
 	        </ul>
 	    </li>
@@ -84,13 +82,19 @@
 	        </a>
 	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Auth): ?>style="display: block;"<?php endif; ?>>
 	            <li>
-					<a href="<?php echo U('Auth/myAuth');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/myAuth'): ?>class="active"<?php endif; ?>>我的权限</a>
+					<a href="<?php echo U('Auth/myAuth');?>" <?php if($url == 'Auth/myAuth'): ?>class="active"<?php endif; ?>>我的权限</a>
 				</li>
 	            <li>
 					<a href="<?php echo U('Auth/admin');?>" <?php if($url == 'Auth/admin'): ?>class="active"<?php endif; ?>>管理员</a>
 				</li>
 	            <li>
-					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($_SERVER['PATH_INFO'] == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>
+					<a href="<?php echo U('Auth/module');?>" <?php if($url == 'Auth/module'): ?>class="active"<?php endif; ?>>模块管理</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/rule');?>" <?php if($url == 'Auth/rule'): ?>class="active"<?php endif; ?>>规则管理</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($url == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>
 				</li>
 	        </ul>
 	    </li>
@@ -103,10 +107,10 @@
 			</a>
 			<ul class="sub-menu"  <?php if(CONTROLLER_NAME == System): ?>style="display: block;"<?php endif; ?>>
 				<li>
-					<a href="<?php echo U('System/aboutUs');?>" <?php if($_SERVER['PATH_INFO'] == 'System/aboutUs'): ?>class="active"<?php endif; ?>>关于我们</a>
+					<a href="<?php echo U('System/aboutUs');?>" <?php if($url == 'System/aboutUs'): ?>class="active"<?php endif; ?>>关于我们</a>
 				</li>
 				<li>
-					<a href="<?php echo U('System/banner');?>" <?php if($_SERVER['PATH_INFO'] == 'System/banner'): ?>class="active"<?php endif; ?>>轮播图</a>
+					<a href="<?php echo U('System/banner');?>" <?php if($url == 'System/banner'): ?>class="active"<?php endif; ?>>轮播图</a>
 				</li>
 			</ul>
 		</li>
@@ -151,16 +155,16 @@
                     <label class="col-sm-2 control-label">类型：</label>
                     <div class="col-sm-6">
                         <label class="radio-inline">
-                            <input type="radio" name="type" id="inlineRadio1" value="1">诗
+                            <input type="radio" name="type" id="inlineRadio1" value="1" <?php if($type == 1): ?>checked<?php endif; ?> >诗
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="type" id="inlineRadio2" value="2">词
+                            <input type="radio" name="type" id="inlineRadio2" value="2" <?php if($type == 2): ?>checked<?php endif; ?> >词
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="type" id="inlineRadio3" value="3">歌
+                            <input type="radio" name="type" id="inlineRadio3" value="3" <?php if($type == 3): ?>checked<?php endif; ?> >歌
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="type" id="inlineRadio4" value="4">赋
+                            <input type="radio" name="type" id="inlineRadio4" value="4" <?php if($type == 4): ?>checked<?php endif; ?> >赋
                         </label>
                     </div>
                 </div>

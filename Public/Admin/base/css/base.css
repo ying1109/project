@@ -159,7 +159,7 @@ a {
 .navMenu>li>a.active, 
 .navMenu>li>a:hover { 
     color: #FFF; 
-    background: #12181b; 
+    background: #1c252b;
 }
 .navMenu>li>ul.sub-menu, 
 .navMenu>li>ul.sub-menu>li>ul.sub-menu { 
@@ -189,7 +189,7 @@ a {
 .navMenu>li>ul.sub-menu li>a:hover, 
 .navMenu>li>ul.sub-menu>li.active >a { 
     color: #FFF; 
-    background: #12181b; 
+    background: #1c252b;
 }
 .icon_1:before { 
     content: "\f0ac"; 
@@ -215,18 +215,17 @@ a {
     font-size: 22px;
 }
 .menu_above {
-    padding: 10px 0 0 10px !important;
     font-size: 16px;
 }
-.menu_above>li {
+.menu_above>ul>li {
     display: inline-block;
     /*border: 1px solid red;*/
 }
-.menu_above>li>a.active,
-.menu_above>li>a:hover {
+.menu_above>ul>li>a.active,
+.menu_above>ul>li>a:hover {
     color: #ff0000;
 }
-.menu_above>li.line {
+.menu_above>ul>li.line {
     margin: 0 10px;
 }
 

@@ -10,7 +10,18 @@ class PoetryController extends BaseController {
         $url = CONTROLLER_NAME . '/' . 'poem';
         $this->assign('url', $url);
         $one = array('name' => '诗词歌赋', 'value' => U('Poetry/poem'));
-        $two = array('name' => '诗', 'value' => U('Poetry/poem'));
+        if (I('type', 1) == 1) {
+            $name = '诗';
+        } elseif (I('type') == 2) {
+            $name = '词';
+
+        } elseif (I('type') == 3) {
+            $name = '歌';
+
+        } elseif (I('type') == 4) {
+            $name = '赋';
+        }
+        $two = array('name' => $name, 'value' => U('Poetry/poem', array('type'=>I('type'))));
         $this->assign("one", $one);
         $this->assign("two", $two);
 
@@ -44,7 +55,18 @@ class PoetryController extends BaseController {
         $url = CONTROLLER_NAME . '/' . 'poem';
         $this->assign('url', $url);
         $one   = array('name' => '诗词歌赋', 'value' => U('Poetry/poem'));
-        $two   = array('name' => '诗', 'value' => U('Poetry/poem'));
+        if (I('type', 1) == 1) {
+            $name = '诗';
+        } elseif (I('type') == 2) {
+            $name = '词';
+
+        } elseif (I('type') == 3) {
+            $name = '歌';
+
+        } elseif (I('type') == 4) {
+            $name = '赋';
+        }
+        $two   = array('name' => $name, 'value' => U('Poetry/poem', array('type'=>I('type'))));
         $three = array('name' => '添加、编辑', 'value' => U('Poetry/poemAddEdit'));
         $this->assign("one", $one);
         $this->assign("two", $two);
@@ -54,8 +76,8 @@ class PoetryController extends BaseController {
 
         $map['id']     = I('id', 0);
         $info          = $Scgf->info($map);
-
         $this->assign('info', $info);
+        $this->assign('type', I('type'));
 
         if (IS_POST) {
             $data['name']    = trim(I('name'), '');
@@ -88,7 +110,18 @@ class PoetryController extends BaseController {
         $url = CONTROLLER_NAME . '/' . 'poem';
         $this->assign('url', $url);
         $one   = array('name' => '诗词歌赋', 'value' => U('Poetry/poem'));
-        $two   = array('name' => '诗', 'value' => U('Poetry/poem'));
+        if (I('type', 1) == 1) {
+            $name = '诗';
+        } elseif (I('type') == 2) {
+            $name = '词';
+
+        } elseif (I('type') == 3) {
+            $name = '歌';
+
+        } elseif (I('type') == 4) {
+            $name = '赋';
+        }
+        $two   = array('name' => $name, 'value' => U('Poetry/poem', array('type'=>I('type'))));
         $three = array('name' => '详情', 'value' => U('Poetry/poemDetail'));
         $this->assign("one", $one);
         $this->assign("two", $two);

@@ -29,8 +29,6 @@
 	<div id="right">
 		<ul>
 			<li><span><?php echo ($admin["nickname"]); ?></span></li>
-			<li><span><?php echo ($url); ?></span></li>
-			<li><span><?php echo ($admin["nickname"]); ?></span></li>
 			<li>
 				<a href="<?php echo U('Login/loginOut');?>">
 					<i class="fa fa-power-off fa-lg"></i>
@@ -88,6 +86,12 @@
 				</li>
 	            <li>
 					<a href="<?php echo U('Auth/admin');?>" <?php if($url == 'Auth/admin'): ?>class="active"<?php endif; ?>>管理员</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/module');?>" <?php if($url == 'Auth/module'): ?>class="active"<?php endif; ?>>模块管理</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/rule');?>" <?php if($url == 'Auth/rule'): ?>class="active"<?php endif; ?>>规则管理</a>
 				</li>
 	            <li>
 					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($url == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>

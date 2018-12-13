@@ -16,16 +16,16 @@
                     <label class="col-sm-2 control-label">类型：</label>
                     <div class="col-sm-6">
                         <label class="radio-inline">
-                            <input type="radio" name="type" id="inlineRadio1" value="1">诗
+                            <input type="radio" name="type" id="inlineRadio1" value="1" <if condition="$type eq 1">checked</if> >诗
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="type" id="inlineRadio2" value="2">词
+                            <input type="radio" name="type" id="inlineRadio2" value="2" <if condition="$type eq 2">checked</if> >词
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="type" id="inlineRadio3" value="3">歌
+                            <input type="radio" name="type" id="inlineRadio3" value="3" <if condition="$type eq 3">checked</if> >歌
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="type" id="inlineRadio4" value="4">赋
+                            <input type="radio" name="type" id="inlineRadio4" value="4" <if condition="$type eq 4">checked</if> >赋
                         </label>
                     </div>
                 </div>

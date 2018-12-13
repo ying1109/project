@@ -1,25 +1,23 @@
-<div class="panel panel-default">
-    <div id="panel-body">
-        <ul class="menu_above">
-            <li>
-                <a href="{:U('poem', array('type'=>1))}" <if condition="$type eq 1">class="active"</if> >诗
-                </a>
-            </li>
-            <li class="line">|</li>
-            <li>
-                <a href="{:U('poem', array('type'=>2))}" <if condition="$type eq 2">class="active"</if> >词
-                </a>
-            </li>
-            <li class="line">|</li>
-            <li>
-                <a href="{:U('poem', array('type'=>3))}" <if condition="$type eq 3">class="active"</if> >歌
-                </a>
-            </li>
-            <li class="line">|</li>
-            <li>
-                <a href="{:U('poem', array('type'=>4))}" <if condition="$type eq 4">class="active"</if> >赋
-                </a>
-            </li>
-        </ul>
-    </div>
+<div class="menu_above">
+    <ul>
+        <li>
+            <a href="{:U('poem', array('type'=>1))}" <if condition="$type eq 1">class="active"</if> >诗
+            </a>
+        </li>
+        <li class="line">|</li>
+        <li>
+            <a href="{:U('poem', array('type'=>2))}" <if condition="$type eq 2">class="active"</if> >词
+            </a>
+        </li>
+        <li class="line">|</li>
+        <li>
+            <a href="{:U('poem', array('type'=>3))}" <if condition="$type eq 3">class="active"</if> >歌
+            </a>
+        </li>
+        <li class="line">|</li>
+        <li>
+            <a href="{:U('poem', array('type'=>4))}" <if condition="$type eq 4">class="active"</if> >赋
+            </a>
+        </li>
+    </ul>
 </div>

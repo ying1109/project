@@ -26,8 +26,6 @@
 	<div id="right">
 		<ul>
 			<li><span><?php echo ($admin["nickname"]); ?></span></li>
-			<li><span><?php echo ($url); ?></span></li>
-			<li><span><?php echo ($admin["nickname"]); ?></span></li>
 			<li>
 				<a href="<?php echo U('Login/loginOut');?>">
 					<i class="fa fa-power-off fa-lg"></i>
@@ -87,6 +85,12 @@
 					<a href="<?php echo U('Auth/admin');?>" <?php if($url == 'Auth/admin'): ?>class="active"<?php endif; ?>>管理员</a>
 				</li>
 	            <li>
+					<a href="<?php echo U('Auth/module');?>" <?php if($url == 'Auth/module'): ?>class="active"<?php endif; ?>>模块管理</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/rule');?>" <?php if($url == 'Auth/rule'): ?>class="active"<?php endif; ?>>规则管理</a>
+				</li>
+	            <li>
 					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($url == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>
 				</li>
 	        </ul>
@@ -140,34 +144,34 @@
 
 		
     <div class="panel panel-default">
-    <div id="panel-body">
-        <ul class="menu_above">
-            <li>
-                <a href="<?php echo U('poem', array('type'=>1));?>" <?php if($type == 1): ?>class="active"<?php endif; ?> >诗
-                </a>
-            </li>
-            <li class="line">|</li>
-            <li>
-                <a href="<?php echo U('poem', array('type'=>2));?>" <?php if($type == 2): ?>class="active"<?php endif; ?> >词
-                </a>
-            </li>
-            <li class="line">|</li>
-            <li>
-                <a href="<?php echo U('poem', array('type'=>3));?>" <?php if($type == 3): ?>class="active"<?php endif; ?> >歌
-                </a>
-            </li>
-            <li class="line">|</li>
-            <li>
-                <a href="<?php echo U('poem', array('type'=>4));?>" <?php if($type == 4): ?>class="active"<?php endif; ?> >赋
-                </a>
-            </li>
-        </ul>
-    </div>
+        <div class="panel-heading" role="tab" id="headingOne">
+            <div class="menu_above">
+    <ul>
+        <li>
+            <a href="<?php echo U('poem', array('type'=>1));?>" <?php if($type == 1): ?>class="active"<?php endif; ?> >诗
+            </a>
+        </li>
+        <li class="line">|</li>
+        <li>
+            <a href="<?php echo U('poem', array('type'=>2));?>" <?php if($type == 2): ?>class="active"<?php endif; ?> >词
+            </a>
+        </li>
+        <li class="line">|</li>
+        <li>
+            <a href="<?php echo U('poem', array('type'=>3));?>" <?php if($type == 3): ?>class="active"<?php endif; ?> >歌
+            </a>
+        </li>
+        <li class="line">|</li>
+        <li>
+            <a href="<?php echo U('poem', array('type'=>4));?>" <?php if($type == 4): ?>class="active"<?php endif; ?> >赋
+            </a>
+        </li>
+    </ul>
 </div>
-    <div class="panel panel-default">
+        </div>
         <div class="panel-body">
             <div class="form-group">
-                <a href="<?php echo U('poemAddEdit');?>" class="btn btn-primary">添加编辑</a>
+                <a href="<?php echo U('poemAddEdit', array('type'=>$type));?>" class="btn btn-primary">添加编辑</a>
             </div>
             <table class="table table-hover">
                 <thead>
@@ -179,7 +183,6 @@
                         <th>内容</th>
                         <th>创作背景</th>
                         <th>创建时间</th>
-                        <!--<th>更新时间</th>-->
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -192,15 +195,15 @@
                             <td><?php echo (substr($v["content"], 0, 30)); ?></td>
                             <td><?php echo (substr($v["detail"], 0, 30)); ?></td>
                             <td><?php echo (date( 'Y-m-d H:i:s', $v["create_time"])); ?></td>
-                            <!--<td><?php echo (date( 'Y-m-d H:i:s', $v["update_time"])); ?></td>-->
                             <td>
-                                <a class="btn btn-info btn-xs" href="<?php echo U('Poetry/poemDetail', array('id'=>$v['id']));?>">查看</a>
-                                <a class="btn btn-success btn-xs" href="<?php echo U('Poetry/poemAddEdit', array('id'=>$v['id']));?>">编辑</a>
+                                <a class="btn btn-info btn-xs" href="<?php echo U('Poetry/poemDetail', array('id'=>$v['id'], 'type'=>$type));?>">查看</a>
+                                <a class="btn btn-success btn-xs" href="<?php echo U('Poetry/poemAddEdit', array('id'=>$v['id'], 'type'=>$type));?>">编辑</a>
                                 <a class="btn btn-danger btn-xs" name="<?php echo ($v["id"]); ?>" href="#">删除</a>
                             </td>
                         </tr>
                     </tbody><?php endforeach; endif; else: echo "" ;endif; ?>
             </table>
+            <?php echo ($page); ?>
         </div>
     </div>
 
@@ -221,25 +224,27 @@
 
     <script type="text/javascript">
         $('.btn-danger').click(function () {
-            var id = $(this).attr('name');
+            if (confirm('确定删除吗？')) {
+                var id = $(this).attr('name');
 
-            $.ajax({
-                url: "<?php echo U('Ajax/poemDel');?>",
-                type: 'post',
-                dataType: 'json',
-                data: {
-                    id: id,
-                },
-                success: function (data) {
-                    if (data.res == 1) {
-                        alert(data.msg);
-                        var url = "<?php echo U('poem');?>";
-                        location.href = url;
-                    } else {
-                        alert(data.msg);
+                $.ajax({
+                    url: "<?php echo U('Ajax/poemDel');?>",
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        id: id,
+                    },
+                    success: function (data) {
+                        if (data.res == 1) {
+                            alert(data.msg);
+                            var url = "<?php echo U('poem');?>";
+                            location.href = url;
+                        } else {
+                            alert(data.msg);
+                        }
                     }
-                }
-            })
+                })
+            }
         })
     </script>
 
