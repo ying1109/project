@@ -10,21 +10,15 @@
 	    <li>
 	        <a href="javascript:;" <if condition="CONTROLLER_NAME eq Poetry">class="active"</if> >
 	            <i class="fa fa-user"></i>
-	            <span class="">诗词歌赋</span>
+	            <span class="">诗词文句</span>
 	            <span class="arrow"></span>
 	        </a>
 	        <ul class="sub-menu"  <if condition="CONTROLLER_NAME eq Poetry">style="display: block;"</if>>
 	            <li>
-					<a href="{:U('Poetry/poem')}" <if condition="$url eq 'Poetry/poem'">class="active"</if>>诗</a>
+					<a href="{:U('Poetry/poem')}" <if condition="$url eq 'Poetry/poem'">class="active"</if>>诗词歌赋</a>
 				</li>
 	            <li>
-					<a href="{:U('Poetry/ci')}" <if condition="$url eq 'Poetry/ci'">class="active"</if>>词</a>
-				</li>
-	            <li>
-					<a href="{:U('Poetry/song')}" <if condition="$url eq 'Poetry/song'">class="active"</if>>歌</a>
-				</li>
-	            <li>
-					<a href="{:U('Poetry/fu')}" <if condition="$url eq 'Poetry/fu'">class="active"</if>>赋</a>
+					<a href="{:U('Poetry/sentence')}" <if condition="$url eq 'Poetry/sentence'">class="active"</if>>佳句</a>
 				</li>
 	        </ul>
 	    </li>

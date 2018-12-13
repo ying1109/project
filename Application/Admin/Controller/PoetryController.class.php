@@ -9,7 +9,8 @@ class PoetryController extends BaseController {
     public function poem() {
         $url = CONTROLLER_NAME . '/' . 'poem';
         $this->assign('url', $url);
-        $one = array('name' => '诗词歌赋', 'value' => U('Poetry/poem'));
+        $one = array('name' => '诗词文句', 'value' => U('Poetry/poem'));
+        $two = array('name' => '诗词歌赋', 'value' => U('Poetry/poem'));
         if (I('type', 1) == 1) {
             $name = '诗';
         } elseif (I('type') == 2) {
@@ -21,9 +22,10 @@ class PoetryController extends BaseController {
         } elseif (I('type') == 4) {
             $name = '赋';
         }
-        $two = array('name' => $name, 'value' => U('Poetry/poem', array('type'=>I('type'))));
+        $three = array('name' => $name, 'value' => U('Poetry/poem', array('type'=>I('type'))));
         $this->assign("one", $one);
         $this->assign("two", $two);
+        $this->assign("three", $three);
 
         $Scgf = D('Scgf');
 
@@ -54,7 +56,8 @@ class PoetryController extends BaseController {
     public function poemAddEdit() {
         $url = CONTROLLER_NAME . '/' . 'poem';
         $this->assign('url', $url);
-        $one   = array('name' => '诗词歌赋', 'value' => U('Poetry/poem'));
+        $one = array('name' => '诗词文句', 'value' => U('Poetry/poem'));
+        $two = array('name' => '诗词歌赋', 'value' => U('Poetry/poem'));
         if (I('type', 1) == 1) {
             $name = '诗';
         } elseif (I('type') == 2) {
@@ -66,11 +69,12 @@ class PoetryController extends BaseController {
         } elseif (I('type') == 4) {
             $name = '赋';
         }
-        $two   = array('name' => $name, 'value' => U('Poetry/poem', array('type'=>I('type'))));
-        $three = array('name' => '添加、编辑', 'value' => U('Poetry/poemAddEdit'));
+        $three   = array('name' => $name, 'value' => U('Poetry/poem', array('type'=>I('type'))));
+        $four = array('name' => '添加、编辑', 'value' => U('Poetry/poemAddEdit'));
         $this->assign("one", $one);
         $this->assign("two", $two);
         $this->assign("three", $three);
+        $this->assign("four", $four);
 
         $Scgf = D('Scgf');
 
@@ -109,7 +113,8 @@ class PoetryController extends BaseController {
     public function poemDetail() {
         $url = CONTROLLER_NAME . '/' . 'poem';
         $this->assign('url', $url);
-        $one   = array('name' => '诗词歌赋', 'value' => U('Poetry/poem'));
+        $one = array('name' => '诗词文句', 'value' => U('Poetry/poem'));
+        $two = array('name' => '诗词歌赋', 'value' => U('Poetry/poem'));
         if (I('type', 1) == 1) {
             $name = '诗';
         } elseif (I('type') == 2) {
@@ -121,11 +126,12 @@ class PoetryController extends BaseController {
         } elseif (I('type') == 4) {
             $name = '赋';
         }
-        $two   = array('name' => $name, 'value' => U('Poetry/poem', array('type'=>I('type'))));
-        $three = array('name' => '详情', 'value' => U('Poetry/poemDetail'));
+        $three   = array('name' => $name, 'value' => U('Poetry/poem', array('type'=>I('type'))));
+        $four = array('name' => '详情', 'value' => U('Poetry/poemDetail'));
         $this->assign("one", $one);
         $this->assign("two", $two);
         $this->assign("three", $three);
+        $this->assign("four", $four);
 
         $Scgf = D('Scgf');
 
