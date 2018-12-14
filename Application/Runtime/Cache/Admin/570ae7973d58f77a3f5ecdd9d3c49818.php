@@ -85,6 +85,9 @@
 					<a href="<?php echo U('Auth/rule');?>" <?php if($url == 'Auth/rule'): ?>class="active"<?php endif; ?>>规则管理</a>
 				</li>
 	            <li>
+					<a href="<?php echo U('Auth/auth');?>" <?php if($url == 'Auth/auth'): ?>class="active"<?php endif; ?>>权限管理</a>
+				</li>
+	            <li>
 					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($url == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>
 				</li>
 	        </ul>
@@ -148,7 +151,7 @@
                         <th>ID</th>
                         <th>账号</th>
                         <th>昵称</th>
-                        <th>权限</th>
+                        <th>组别</th>
                         <th>是否启用</th>
                         <th>操作</th>
                     </tr>
@@ -158,13 +161,14 @@
                             <td><?php echo ($v["id"]); ?></td>
                             <td><?php echo ($v["account"]); ?></td>
                             <td><?php echo ($v["nickname"]); ?></td>
-                            <td><?php echo ($v["account"]); ?></td>
+                            <td><?php echo ($v["group_name"]); ?></td>
                             <td>
                                 <?php switch($v["status"]): case "1": ?>是<?php break;?>
                                     <?php case "0": ?>否<?php break; endswitch;?>
                             </td>
                             <td>
                                 <a class="btn btn-success btn-xs" href="<?php echo U('Auth/adminAddEdit', array('id'=>$v['id']));?>">编辑</a>
+                                <a class="btn btn-danger btn-xs" name="<?php echo ($v['id']); ?>">删除</a>
                             </td>
                         </tr>
                     </tbody><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -186,6 +190,32 @@
 <script type="text/javascript" src="/Public/Admin/base/js/base.js"></script>
 
 <!--底部引入其他js文件-->
+
+    <script type="text/javascript">
+        $('.btn-danger').click(function () {
+            if (confirm('确定删除吗？')) {
+                var id = $(this).attr('name');
+                
+                $.ajax({
+                    url: "<?php echo U('Ajax/adminDel');?>",
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        id: id,
+                    },
+                    success: function (data) {
+                        if (data.res == 1) {
+                            alert(data.msg);
+                            var url = "<?php echo U('Auth/admin');?>";
+                            location.href = url;
+                        } else {
+                            alert(data.msg);
+                        }
+                    }
+                })
+            }
+        })
+    </script>
 
 
 </body>

@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 本地
+Source Server         : localhost
 Source Server Version : 50553
-Source Host           : localhost:3306
+Source Host           : 127.0.0.1:3306
 Source Database       : my_project
 
 Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-12-14 00:04:38
+Date: 2018-12-14 14:55:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -59,13 +59,31 @@ CREATE TABLE `admin` (
   `status` int(4) DEFAULT '1' COMMENT '是否启用，0不启用，1启用',
   `create_time` varchar(255) DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='后台管理员表';
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='后台管理员表';
 
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
-INSERT INTO `admin` VALUES ('1', 'admin', '123456', 'a8f283efb0a7639652c9f09012f43cbb', '执笔画浮尘', '1551234567', '/Uploads/system/admin/2018-12-11/5c0fb5a23224f.jpg', '湖南省', '长沙市', '岳麓区', '', '1544545516', '127.0.0.1', '1544547424', '127.0.0.1', null, null, '', null, '1', '1544341065');
-INSERT INTO `admin` VALUES ('2', 'admin1', 'admin1', 'e00cf25ad42683b3df678c61f42c6bda', '雪落无痕', '13312345678', '', '', '', '', '', null, null, null, null, null, null, '', null, '1', '1544341631');
+INSERT INTO `admin` VALUES ('1', 'admin', '123456', 'a8f283efb0a7639652c9f09012f43cbb', '执笔画浮尘', '1551234567', '', '湖南省', '长沙市', '岳麓区', '', '1544547424', '127.0.0.1', '1544758317', '127.0.0.1', null, null, '', '1', '1', '1544341065');
+
+-- ----------------------------
+-- Table structure for `admin_group`
+-- ----------------------------
+DROP TABLE IF EXISTS `admin_group`;
+CREATE TABLE `admin_group` (
+  `id` int(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户组id,自增主键',
+  `name` varchar(255) DEFAULT NULL COMMENT '用户组中文名称',
+  `description` varchar(255) DEFAULT NULL COMMENT '描述信息',
+  `rules` varchar(255) DEFAULT NULL COMMENT '用户组拥有的规则id，多个规则 , 隔开',
+  `create_time` int(11) DEFAULT NULL,
+  `status` int(3) DEFAULT '1' COMMENT '用户组状态：为1正常，为0禁用,-1为删除',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of admin_group
+-- ----------------------------
+INSERT INTO `admin_group` VALUES ('1', '超级管理员', '超级管理员', '1,2,3', '1544766530', '1');
 
 -- ----------------------------
 -- Table structure for `admin_module`
@@ -78,11 +96,12 @@ CREATE TABLE `admin_module` (
   `status` int(4) DEFAULT '1' COMMENT '状态',
   `create_time` int(11) DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of admin_module
 -- ----------------------------
+INSERT INTO `admin_module` VALUES ('1', '系统设置', '0', '1', '1544757352');
 
 -- ----------------------------
 -- Table structure for `admin_rule`
@@ -97,11 +116,14 @@ CREATE TABLE `admin_rule` (
   `status` int(1) DEFAULT '1' COMMENT '状态：1启用、-1禁用',
   `create_time` int(11) DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='规则';
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='规则';
 
 -- ----------------------------
 -- Records of admin_rule
 -- ----------------------------
+INSERT INTO `admin_rule` VALUES ('1', '1', 'admin.php/System/aboutUs', '关于我们', '', '1', '1544757407');
+INSERT INTO `admin_rule` VALUES ('2', '1', 'admin.php/System/banner', '轮播图', '', '1', '1544757451');
+INSERT INTO `admin_rule` VALUES ('3', '1', 'admin.php/System/bannerAddEdit', '轮播图添加、编辑', '', '1', '1544757474');
 
 -- ----------------------------
 -- Table structure for `banner`

@@ -52,27 +52,21 @@
 		    </a> 
 		</li>
 
-	    <!--<li>
+	    <li>
 	        <a href="javascript:;" <?php if(CONTROLLER_NAME == Poetry): ?>class="active"<?php endif; ?> >
 	            <i class="fa fa-user"></i>
-	            <span class="">诗词歌赋</span>
+	            <span class="">诗词文句</span>
 	            <span class="arrow"></span>
 	        </a>
 	        <ul class="sub-menu"  <?php if(CONTROLLER_NAME == Poetry): ?>style="display: block;"<?php endif; ?>>
 	            <li>
-					<a href="<?php echo U('Poetry/poem');?>" <?php if($url == 'Poetry/poem'): ?>class="active"<?php endif; ?>>诗</a>
+					<a href="<?php echo U('Poetry/poem');?>" <?php if($url == 'Poetry/poem'): ?>class="active"<?php endif; ?>>诗词歌赋</a>
 				</li>
 	            <li>
-					<a href="<?php echo U('Poetry/ci');?>" <?php if($url == 'Poetry/ci'): ?>class="active"<?php endif; ?>>词</a>
-				</li>
-	            <li>
-					<a href="<?php echo U('Poetry/song');?>" <?php if($url == 'Poetry/song'): ?>class="active"<?php endif; ?>>歌</a>
-				</li>
-	            <li>
-					<a href="<?php echo U('Poetry/fu');?>" <?php if($url == 'Poetry/fu'): ?>class="active"<?php endif; ?>>赋</a>
+					<a href="<?php echo U('Poetry/sentence');?>" <?php if($url == 'Poetry/sentence'): ?>class="active"<?php endif; ?>>佳句</a>
 				</li>
 	        </ul>
-	    </li>-->
+	    </li>
 
 	    <li>
 	        <a href="javascript:;" <?php if(CONTROLLER_NAME == Auth): ?>class="active"<?php endif; ?> >
@@ -92,6 +86,9 @@
 				</li>
 	            <li>
 					<a href="<?php echo U('Auth/rule');?>" <?php if($url == 'Auth/rule'): ?>class="active"<?php endif; ?>>规则管理</a>
+				</li>
+	            <li>
+					<a href="<?php echo U('Auth/auth');?>" <?php if($url == 'Auth/auth'): ?>class="active"<?php endif; ?>>权限管理</a>
 				</li>
 	            <li>
 					<a href="<?php echo U('Auth/resetPwd');?>" <?php if($url == 'Auth/resetPwd'): ?>class="active"<?php endif; ?>>安全设置</a>

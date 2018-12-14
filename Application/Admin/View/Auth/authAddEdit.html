@@ -1,0 +1,99 @@
+<extend name="Base:base" />
+
+<block name="other_css">
+    <link type="text/css" href="/Public/Admin/webuploader/webuploader.css" rel="stylesheet" />
+    <link type="text/css" href="/Public/Admin/webuploader/style.css" rel="stylesheet" />
+</block>
+
+<!-- 内容结束开始 -->
+<block name="main_content">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form-horizontal" method="POST" action="">
+                <input type="hidden" name="id" value="{$info['id']}">
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">组别名称：</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="name" value="{$info.name}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">组别介绍：</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="description" value="{$info.description}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">状态：</label>
+                    <div class="col-sm-6">
+                        <label class="radio-inline">
+                            <input type="radio" name="status" id="inlineRadio1" value="1" checked>启用
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="status" id="inlineRadio2" value="0">禁用
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">权限选择：</label>
+                    <div class="col-sm-10">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="checkAll" value="1">全选
+                        </label>
+                        <volist name="list_module" id="v">
+                            <h4 style="font-weight: 700;">{$v.name}</h4>
+                            <volist name="v['rule']" id="v1">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="check" name="rules[]" value="{$v1.id}">{$v1.name}
+                                </label>
+                            </volist>
+                        </volist>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4">
+                        <button type="submit" class="btn btn-primary">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</block>
+<!-- 内容结束结束 -->
+
+<block name="other_script">
+    <script type="text/javascript">
+        // 全选
+        $('#checkAll').click(function () {
+            if ($('#checkAll').prop('checked')) {
+            	for (i = 0; i < $('.check').length; i++) {
+                    $('.check').eq(i).prop('checked', true);
+            	}
+            } else {
+                for (i = 0; i < $('.check').length; i++) {
+                    $('.check').eq(i).prop('checked', false);
+                }
+            }
+        });
+        // 选一个
+        $('.check').click(function () {
+            var num = 0;
+            for (i = 0; i < $('.check').length; i++) {
+                var check = $('.check').eq(i).prop('checked');
+                if (check) {
+                    num++;
+                }
+            }
+            if (num == $('.check').length) {
+                $('#checkAll').prop('checked', true);
+            } else {
+                $('#checkAll').prop('checked', false);
+            }
+        });
+    </script>
+</block>

@@ -39,6 +39,18 @@ class AdminModuleModel extends Model {
 
         return $list;
     }
+
+    public function delete($map) {
+        $M   = M('AdminModule');
+        $res = $M->where($map)->delete();
+
+        if ($res) {
+            return (array('status'=>1, 'res'=>$res, 'msg'=>'删除成功！'));
+        } else {
+            return (array('status'=>0, 'msg'=>'删除失败！'));
+        }
+    }
+
 }
 
 ?>

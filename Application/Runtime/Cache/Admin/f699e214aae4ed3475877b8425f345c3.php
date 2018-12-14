@@ -12,6 +12,9 @@
 
 	<!-- 顶部引入其他CSS文件 -->
 	
+    <link type="text/css" href="/Public/Admin/webuploader/webuploader.css" rel="stylesheet" />
+    <link type="text/css" href="/Public/Admin/webuploader/style.css" rel="stylesheet" />
+
 </head>
 <body>
 	
@@ -142,33 +145,54 @@
 		
     <div class="panel panel-default">
         <div class="panel-body">
-            <div class="form-group">
-                <a href="<?php echo U('ruleAddEdit');?>" class="btn btn-primary">添加编辑</a>
-            </div>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>所属模块</th>
-                        <th>规则名称</th>
-                        <th>规则</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tbody>
-                        <tr>
-                            <td><?php echo ($v["id"]); ?></td>
-                            <td><?php echo ($v["module"]); ?></td>
-                            <td><?php echo ($v["name"]); ?></td>
-                            <td><?php echo ($v["url"]); ?></td>
-                            <td>
-                                <a class="btn btn-success btn-xs" href="<?php echo U('Auth/ruleAddEdit', array('id'=>$v['id']));?>">编辑</a>
-                                <a class="btn btn-danger btn-xs" name="<?php echo ($v["id"]); ?>" href="#">删除</a>
-                            </td>
-                        </tr>
-                    </tbody><?php endforeach; endif; else: echo "" ;endif; ?>
-            </table>
-            <?php echo ($page); ?>
+            <form class="form-horizontal" method="POST" action="">
+                <input type="hidden" name="id" value="<?php echo ($info['id']); ?>">
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">组别名称：</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="name" value="<?php echo ($info["name"]); ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">组别介绍：</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="description" value="<?php echo ($info["description"]); ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">状态：</label>
+                    <div class="col-sm-6">
+                        <label class="radio-inline">
+                            <input type="radio" name="status" id="inlineRadio1" value="1" checked>启用
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="status" id="inlineRadio2" value="0">禁用
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">权限选择：</label>
+                    <div class="col-sm-10">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="checkAll" value="1">全选
+                        </label>
+                        <?php if(is_array($list_module)): $i = 0; $__LIST__ = $list_module;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><h4 style="font-weight: 700;"><?php echo ($v["name"]); ?></h4>
+                            <?php if(is_array($v['rule'])): $i = 0; $__LIST__ = $v['rule'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><label class="checkbox-inline">
+                                    <input type="checkbox" class="check" name="rules[]" value="<?php echo ($v1["id"]); ?>"><?php echo ($v1["name"]); ?>
+                                </label><?php endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4">
+                        <button type="submit" class="btn btn-primary">提交</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -186,6 +210,36 @@
 <script type="text/javascript" src="/Public/Admin/base/js/base.js"></script>
 
 <!--底部引入其他js文件-->
+
+    <script type="text/javascript">
+        // 全选
+        $('#checkAll').click(function () {
+            if ($('#checkAll').prop('checked')) {
+            	for (i = 0; i < $('.check').length; i++) {
+                    $('.check').eq(i).prop('checked', true);
+            	}
+            } else {
+                for (i = 0; i < $('.check').length; i++) {
+                    $('.check').eq(i).prop('checked', false);
+                }
+            }
+        });
+        // 选一个
+        $('.check').click(function () {
+            var num = 0;
+            for (i = 0; i < $('.check').length; i++) {
+                var check = $('.check').eq(i).prop('checked');
+                if (check) {
+                    num++;
+                }
+            }
+            if (num == $('.check').length) {
+                $('#checkAll').prop('checked', true);
+            } else {
+                $('#checkAll').prop('checked', false);
+            }
+        });
+    </script>
 
 
 </body>

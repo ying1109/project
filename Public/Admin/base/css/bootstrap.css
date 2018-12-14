@@ -2664,6 +2664,8 @@ input[type="search"] {
   position: relative;
   display: inline-block;
   padding-left: 20px;
+  /*yyy*/
+  margin-right: 10px;
   margin-bottom: 0;
   font-weight: normal;
   vertical-align: middle;

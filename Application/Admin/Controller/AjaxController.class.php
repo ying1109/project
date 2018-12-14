@@ -52,14 +52,42 @@ class AjaxController extends BaseController {
         }
     }
 
+    // 管理员删除
+    public function adminDel() {
+        $Admin = D('Admin');
+
+        $map['id'] = I('id', 0);
+        $info      = $Admin->info($map);
+        if ($info['group_id'] == 1) {
+            $this->ajaxReturn(array('res'=>0, 'msg'=>'您不能删除超级管理员！'));
+        }
+        $res = $Admin->delete($map);
+        if (!$res['status']) {
+            $this->ajaxReturn(array('res'=>0, 'msg'=>'删除失败！'));
+        } else {
+            $this->ajaxReturn(array('res'=>1, 'msg'=>'删除成功！'));
+        }
+    }
+
     // 模块删除
     public function moduleDel() {
         $AdminModule = D('AdminModule');
 
-        $map['id']      = I('id');
-        $data['status'] = -1;
+        $map['id'] = I('id');
+        $res       = $AdminModule->delete($map);
+        if (!$res['status']) {
+            $this->ajaxReturn(array('res'=>0, 'msg'=>'删除失败！'));
+        } else {
+            $this->ajaxReturn(array('res'=>1, 'msg'=>'删除成功！'));
+        }
+    }
 
-        $res = $AdminModule->update($map, $data);
+    // 模块删除
+    public function ruleDel() {
+        $AdminRule = D('AdminRule');
+
+        $map['id'] = I('id');
+        $res       = $AdminRule->delete($map);
         if (!$res['status']) {
             $this->ajaxReturn(array('res'=>0, 'msg'=>'删除失败！'));
         } else {

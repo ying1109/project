@@ -14,9 +14,28 @@ class AuthController extends BaseController {
         $this->assign("one", $one);
         $this->assign("two", $two);
 
-        $Admin = D('Admin');
+        $Admin      = D('Admin');
+        $AdminGroup = D('AdminGroup');
+
+        // 分页开始
+        // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
+        $count = M('Admin')->count();// 查询满足要求的总记录数
+        $Page  = new \Think\Page($count, 10);// 实例化分页类 传入总记录数和每页显示的记录数
+        $Page->setConfig('header','<li class="disabled hwh-page-info"><a>共<em>%TOTAL_ROW%</em>条  <em>%NOW_PAGE%</em>/%TOTAL_PAGE%</a></li>');
+        $Page->setConfig('prev','上一页');
+        $Page->setConfig('next','下一页');
+        $Page->setConfig('last','末页');
+        $Page->setConfig('first','首页');
+        $Page->setConfig('theme','%HEADER% %FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%');
+        $show = bootstrap_page_style($Page->show());// 分页显示输出
+        $this->assign('page',$show);// 赋值分页输出
 
         $list = $Admin->lists();
+        foreach ($list as $k => $v) {
+            $map['id']              = $v['group_id'];
+            $info_group             = $AdminGroup->info($map);
+            $list[$k]['group_name'] = $info_group['name'];
+        }
 
         $this->assign('list', $list);
         $this->display();
@@ -32,17 +51,23 @@ class AuthController extends BaseController {
         $this->assign("two", $two);
         $this->assign("three", $three);
 
-        $Admin = D('Admin');
+        $Admin      = D('Admin');
+        $AdminGroup = D('AdminGroup');
 
         $map['id'] = I('id', 0);
         $info      = $Admin->info($map);
 
         $this->assign('info', $info);
 
+        $map_group['status'] = 1;
+        $list_group = $AdminGroup->lists($map_group);
+        $this->assign('list_group', $list_group);
+
         if (IS_POST) {
             $data['account']    = I('account');
             $data['nickname']   = I('nickname');
             $data['phone']      = I('phone');
+            $data['group_id']   = I('group_id');
             $data['s_province'] = I('s_province');
             $data['s_city']     = I('s_city');
             $data['s_county']   = I('s_county');
@@ -53,6 +78,7 @@ class AuthController extends BaseController {
             if (!$info) {
                 $data['password_md5'] = md5(md5(I('account')) . md5(I('password')));
                 $data['create_time']  = time();
+
                 $res = $Admin->add($data);
             } else {
                 $res = $Admin->update($map, $data);
@@ -213,6 +239,99 @@ class AuthController extends BaseController {
             }
             if ($res['status']) {
                 $this->success('提交成功', U('ruleAddEdit'));
+            } else {
+                $this->error('提交失败');
+            }
+            exit;
+        }
+
+        $this->display();
+    }
+
+    // 权限
+    public function auth() {
+        $url = CONTROLLER_NAME . '/' . 'auth';
+        $this->assign('url', $url);
+        $one = array('name' => '权限管理', 'value' => U('Auth/auth'));
+        $two = array('name' => '权限', 'value' => U('Auth/auth'));
+        $this->assign("one", $one);
+        $this->assign("two", $two);
+
+        $AdminGroup = D('AdminGroup');
+        $AdminRule  = D('AdminRule');
+
+        $map['status'] = array('GT', 0);
+
+        // 分页开始
+        // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
+        $count = M('AdminGroup')->where($map)->count();// 查询满足要求的总记录数
+        $Page  = new \Think\Page($count, 1);// 实例化分页类 传入总记录数和每页显示的记录数
+        $Page->setConfig('header','<li class="disabled hwh-page-info"><a>共<em>%TOTAL_ROW%</em>条  <em>%NOW_PAGE%</em>/%TOTAL_PAGE%</a></li>');
+        $Page->setConfig('prev','上一页');
+        $Page->setConfig('next','下一页');
+        $Page->setConfig('last','末页');
+        $Page->setConfig('first','首页');
+        $Page->setConfig('theme','%HEADER% %FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%');
+        $show = bootstrap_page_style($Page->show());// 分页显示输出
+        $this->assign('page',$show);// 赋值分页输出
+        $list = $AdminGroup->lists($map, $Page->firstRow, $Page->listRows);
+
+        $name = '';
+        foreach ($list as $k => $v) {
+            $rules = explode(',',$v['rules']);
+            foreach ($rules as $k1 => $v1) {
+                $map['id'] = $v1;
+                $info_rule = $AdminRule->info($map);
+                $name      .= $info_rule['name'] . '，';
+            }
+            $list[$k]['rule_name'] = rtrim($name, '，');
+        }
+
+        $this->assign('list', $list);
+        $this->display();
+    }
+    // 规则添加、编辑
+    public function authAddEdit() {
+        $url = CONTROLLER_NAME . '/' . 'auth';
+        $this->assign('url', $url);
+        $one = array('name' => '权限管理', 'value' => U('Auth/auth'));
+        $two = array('name' => '权限', 'value' => U('Auth/auth'));
+        $three = array('name' => '权限添加、编辑', 'value' => U('Auth/authAddEdit'));
+        $this->assign("one", $one);
+        $this->assign("two", $two);
+        $this->assign("three", $three);
+
+        $AdminModule = D('AdminModule');
+        $AdminRule   = D('AdminRule');
+        $AdminGroup  = D('AdminGroup');
+
+        $list_module = $AdminModule->lists();
+        if ($list_module) {
+            foreach ($list_module as $k => $v) {
+                $map_rule['module']      = $v['id'];
+                $list_module[$k]['rule'] = $AdminRule->lists($map_rule);
+        	}
+        }
+        $this->assign('list_module',$list_module );
+
+        $map['id'] = I('id', 0);
+        $info      = $AdminGroup->info($map);
+        $this->assign('info', $info);
+
+        if (IS_POST) {
+            $data['rules']       = rtrim(implode(',', I('rules')), ',');
+            $data['name']        = I('name');
+            $data['description'] = I('description');
+            $data['status']      = I('status');
+
+            if ($info) {
+                $res = $AdminGroup->update($map, $data);
+            } else {
+                $data['create_time'] = time();
+                $res = $AdminGroup->add($data);
+            }
+            if ($res['status']) {
+                $this->success('提交成功', U('auth'));
             } else {
                 $this->error('提交失败');
             }

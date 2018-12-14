@@ -1,0 +1,51 @@
+<!-- <a href="{:U('Index/index')}" title="">我我我我我我我我我我</a> -->
+<extend name="Base:base" />
+
+<block name="other_css"></block>
+
+<!-- 内容结束开始 -->
+<block name="main_content">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <a href="{:U('authAddEdit')}" class="btn btn-primary">添加编辑</a>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>组别</th>
+                        <th>状态</th>
+                        <th>权限</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <volist name="list" id="v">
+                    <tbody>
+                        <tr>
+                            <td>{$v.id}</td>
+                            <td>{$v.name}</td>
+                            <td>
+                                <switch name="v.status">
+                                    <case value="1">启用</case>
+                                    <case value="0">禁用</case>
+                                    <default />
+                                </switch>
+                            </td>
+                            <td>{$v.rule_name}</td>
+                            <td>
+                                <a class="btn btn-success btn-xs" href="{:U('Auth/authAddEdit', array('id'=>$v['id']))}">编辑</a>
+                                <a class="btn btn-danger btn-xs" name="{$v.id}" href="#">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </volist>
+            </table>
+            {$page}
+        </div>
+    </div>
+</block>
+<!-- 内容结束结束 -->
+
+
+<block name="other_script"></block>

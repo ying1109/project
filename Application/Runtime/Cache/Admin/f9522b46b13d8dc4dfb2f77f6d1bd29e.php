@@ -143,26 +143,30 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="form-group">
-                <a href="<?php echo U('ruleAddEdit');?>" class="btn btn-primary">添加编辑</a>
+                <a href="<?php echo U('authAddEdit');?>" class="btn btn-primary">添加编辑</a>
             </div>
             <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>所属模块</th>
-                        <th>规则名称</th>
-                        <th>规则</th>
+                        <th>组别</th>
+                        <th>状态</th>
+                        <th>权限</th>
                         <th>操作</th>
                     </tr>
                 </thead>
                 <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tbody>
                         <tr>
                             <td><?php echo ($v["id"]); ?></td>
-                            <td><?php echo ($v["module"]); ?></td>
                             <td><?php echo ($v["name"]); ?></td>
-                            <td><?php echo ($v["url"]); ?></td>
                             <td>
-                                <a class="btn btn-success btn-xs" href="<?php echo U('Auth/ruleAddEdit', array('id'=>$v['id']));?>">编辑</a>
+                                <?php switch($v["status"]): case "1": ?>启用<?php break;?>
+                                    <?php case "0": ?>禁用<?php break;?>
+                                    <?php default: endswitch;?>
+                            </td>
+                            <td><?php echo ($v["rule_name"]); ?></td>
+                            <td>
+                                <a class="btn btn-success btn-xs" href="<?php echo U('Auth/authAddEdit', array('id'=>$v['id']));?>">编辑</a>
                                 <a class="btn btn-danger btn-xs" name="<?php echo ($v["id"]); ?>" href="#">删除</a>
                             </td>
                         </tr>

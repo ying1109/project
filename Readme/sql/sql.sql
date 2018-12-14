@@ -86,5 +86,15 @@ CREATE TABLE `admin_module` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+-- 组别
+DROP TABLE IF EXISTS `admin_group`;
+CREATE TABLE `admin_group` (
+  `id` int(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户组id,自增主键',
+  `name` varchar(20) NOT NULL DEFAULT '' COMMENT '用户组中文名称',
+  `description` varchar(80) NOT NULL DEFAULT '' COMMENT '描述信息',
+  `status` int(3) NOT NULL DEFAULT '1' COMMENT '用户组状态：为1正常，为0禁用,-1为删除',
+  `rules` varchar(500) NOT NULL DEFAULT '' COMMENT '用户组拥有的规则id，多个规则 , 隔开',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 

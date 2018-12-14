@@ -42,4 +42,30 @@
 <!-- 内容结束结束 -->
 
 
-<block name="other_script"></block>
+<block name="other_script">
+    <script type="text/javascript">
+        $('.btn-danger').click(function () {
+            if (confirm('确定删除吗？')) {
+                var id = $(this).attr('name');
+
+                $.ajax({
+                    url: "{:U('Ajax/ruleDel')}",
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        id: id,
+                    },
+                    success: function (data) {
+                        if (data.res == 1) {
+                            alert(data.msg);
+                            var url = "{:U('rule')}";
+                            location.href = url;
+                        } else {
+                            alert(data.msg);
+                        }
+                    }
+                })
+            }
+        })
+    </script>
+</block>

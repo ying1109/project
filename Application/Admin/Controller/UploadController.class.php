@@ -6,8 +6,6 @@ header('content-type:text/html; charset=utf-8');
 class UploadController extends BaseController {
     //轮播图上传
     public function bannerUpload(){
-        //$site_info = $this->site_info;
-
         header('Access-Control-Allow-Origin:*');
         // 大小需要修改ini文件的  upload_max_filesize、post_max_size
         $upload = new \Think\Upload();// 实例化上传类
@@ -24,7 +22,7 @@ class UploadController extends BaseController {
                 $image = new \Think\Image();
                 $image->open('./Uploads' . $file['savepath'] . $file['savename'] );// 按照原图的比例生成一个最大为150*150的缩略图并保存为thumb.jpg
                 $file_path = '/Uploads'.$file['savepath'].$file['savename'];
-                $image->thumb(750, 500,\Think\Image::IMAGE_THUMB_CENTER)->save( ".".$file_path );
+                $image->thumb(600, 600,\Think\Image::IMAGE_THUMB_CENTER)->save( ".".$file_path );
 
                 $this -> ajaxReturn(
                     array(
@@ -42,8 +40,6 @@ class UploadController extends BaseController {
     }
     //管理员头像上传
     public function adminPortraitUpload(){
-        //$site_info = $this->site_info;
-
         header('Access-Control-Allow-Origin:*');
         // 大小需要修改ini文件的  upload_max_filesize、post_max_size
         $upload = new \Think\Upload();// 实例化上传类
@@ -60,7 +56,7 @@ class UploadController extends BaseController {
                 $image = new \Think\Image();
                 $image->open('./Uploads' . $file['savepath'] . $file['savename'] );// 按照原图的比例生成一个最大为150*150的缩略图并保存为thumb.jpg
                 $file_path = '/Uploads'.$file['savepath'].$file['savename'];
-                $image->thumb(750, 500,\Think\Image::IMAGE_THUMB_CENTER)->save( ".".$file_path );
+                $image->thumb(600, 600,\Think\Image::IMAGE_THUMB_CENTER)->save( ".".$file_path );
 
                 $this -> ajaxReturn(
                     array(
