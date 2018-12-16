@@ -716,3 +716,80 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001021s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001060s ]
 
+[ 2018-12-16T16:04:58+08:00 ] 127.0.0.1 /admin.php/Auth/admin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) G:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::delete() should be compatible with Think\Model::delete($options = Array) G:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0139s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0013s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminGroupModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) G:\www\project\Application\Admin\Model\AdminGroupModel.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin` ORDER BY id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `admin_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' G:\www\project\Application\Runtime\Cache\Admin\570ae7973d58f77a3f5ecdd9d3c49818.php 第 53 行.
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' G:\www\project\Application\Runtime\Cache\Admin\570ae7973d58f77a3f5ecdd9d3c49818.php 第 58 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' G:\www\project\Application\Runtime\Cache\Admin\570ae7973d58f77a3f5ecdd9d3c49818.php 第 69 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' G:\www\project\Application\Runtime\Cache\Admin\570ae7973d58f77a3f5ecdd9d3c49818.php 第 74 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' G:\www\project\Application\Runtime\Cache\Admin\570ae7973d58f77a3f5ecdd9d3c49818.php 第 97 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' G:\www\project\Application\Runtime\Cache\Admin\570ae7973d58f77a3f5ecdd9d3c49818.php 第 102 行.
+NOTIC: [8] Undefined variable: three G:\www\project\Application\Runtime\Cache\Admin\570ae7973d58f77a3f5ecdd9d3c49818.php 第 130 行.
+NOTIC: [8] Undefined variable: four G:\www\project\Application\Runtime\Cache\Admin\570ae7973d58f77a3f5ecdd9d3c49818.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030627s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000935s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001152s ]
+
+[ 2018-12-16T23:22:15+08:00 ] 127.0.0.1 /admin.php/Poetry/poem.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001278s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) G:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::delete() should be compatible with Think\Model::delete($options = Array) G:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0345s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2048] Declaration of Admin\Model\ScgfModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) G:\www\project\Application\Admin\Model\ScgfModel.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `scgf` [ RunTime:0.0257s ]
+SQL: SHOW COLUMNS FROM `scgf` [ RunTime:0.0121s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `scgf` WHERE `type` = 1 AND `status` <> -1 LIMIT 1   [ RunTime:0.0073s ]
+SQL: SELECT * FROM `scgf` WHERE `type` = 1 AND `status` <> -1 ORDER BY id desc LIMIT 0,1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' G:\www\project\Application\Runtime\Cache\Admin\e9ceb4cd81e6707cd7c25ef2270532ae.php 第 53 行.
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' G:\www\project\Application\Runtime\Cache\Admin\e9ceb4cd81e6707cd7c25ef2270532ae.php 第 58 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' G:\www\project\Application\Runtime\Cache\Admin\e9ceb4cd81e6707cd7c25ef2270532ae.php 第 69 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' G:\www\project\Application\Runtime\Cache\Admin\e9ceb4cd81e6707cd7c25ef2270532ae.php 第 74 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' G:\www\project\Application\Runtime\Cache\Admin\e9ceb4cd81e6707cd7c25ef2270532ae.php 第 97 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' G:\www\project\Application\Runtime\Cache\Admin\e9ceb4cd81e6707cd7c25ef2270532ae.php 第 102 行.
+NOTIC: [8] Undefined variable: three G:\www\project\Application\Runtime\Cache\Admin\e9ceb4cd81e6707cd7c25ef2270532ae.php 第 130 行.
+NOTIC: [8] Undefined variable: four G:\www\project\Application\Runtime\Cache\Admin\e9ceb4cd81e6707cd7c25ef2270532ae.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001152s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001184s ]
+
