@@ -294,8 +294,8 @@ class AuthController extends BaseController {
     public function authAddEdit() {
         $url = CONTROLLER_NAME . '/' . 'auth';
         $this->assign('url', $url);
-        $one = array('name' => '权限管理', 'value' => U('Auth/auth'));
-        $two = array('name' => '权限', 'value' => U('Auth/auth'));
+        $one   = array('name' => '权限管理', 'value' => U('Auth/auth'));
+        $two   = array('name' => '权限', 'value' => U('Auth/auth'));
         $three = array('name' => '权限添加、编辑', 'value' => U('Auth/authAddEdit'));
         $this->assign("one", $one);
         $this->assign("two", $two);
@@ -304,19 +304,29 @@ class AuthController extends BaseController {
         $AdminModule = D('AdminModule');
         $AdminRule   = D('AdminRule');
         $AdminGroup  = D('AdminGroup');
+        $Admin       = D('Admin');
 
+        $map_admin['id'] = I('id', 0);
+        $info_admin      = $Admin->info($map_admin);
+        $map_group['id'] = $info_admin['group_id'];
+        $info_group      = $AdminGroup->info($map_group);
+
+        $this->assign('info', $info_group);
+
+        $rule_arr = explode(',',$info_group['rules']);
         $list_module = $AdminModule->lists();
         if ($list_module) {
             foreach ($list_module as $k => $v) {
                 $map_rule['module']      = $v['id'];
                 $list_module[$k]['rule'] = $AdminRule->lists($map_rule);
+                foreach ($list_module[$k]['rule'] as $k1 => $v1) {
+                    if (in_array($v1['id'],$rule_arr)) {
+                        $list_module[$k]['rule'][$k1]['check'] = 1;
+                    }
+                }
         	}
         }
         $this->assign('list_module',$list_module );
-
-        $map['id'] = I('id', 0);
-        $info      = $AdminGroup->info($map);
-        $this->assign('info', $info);
 
         if (IS_POST) {
             $data['rules']       = rtrim(implode(',', I('rules')), ',');
@@ -324,8 +334,8 @@ class AuthController extends BaseController {
             $data['description'] = I('description');
             $data['status']      = I('status');
 
-            if ($info) {
-                $res = $AdminGroup->update($map, $data);
+            if ($info_group) {
+                $res = $AdminGroup->update($map_group, $data);
             } else {
                 $data['create_time'] = time();
                 $res = $AdminGroup->add($data);
@@ -340,7 +350,6 @@ class AuthController extends BaseController {
 
         $this->display();
     }
-
     
     //安全设置
     public function resetPwd() {
@@ -353,4 +362,34 @@ class AuthController extends BaseController {
 
         $this->display();
     }
+
+    // 我的权限
+    public function myAuth() {
+        $AdminModule = D('AdminModule');
+        $AdminRule   = D('AdminRule');
+        $AdminGroup  = D('AdminGroup');
+
+        $info_admin      = session('admin_info');
+        $map_group['id'] = $info_admin['group_id'];
+        $info_group      = $AdminGroup->info($map_group);
+
+        $rule_arr = explode(',',$info_group['rules']);
+        $list_module = $AdminModule->lists();
+        if ($list_module) {
+            foreach ($list_module as $k => $v) {
+                $map_rule['module']      = $v['id'];
+                $list_module[$k]['rule'] = $AdminRule->lists($map_rule);
+                foreach ($list_module[$k]['rule'] as $k1 => $v1) {
+                    if (in_array($v1['id'],$rule_arr)) {
+                        $list_module[$k]['rule'][$k1]['check'] = 1;
+                    }
+                }
+            }
+        }
+        $this->assign('list_module',$list_module );
+
+        $this->assign('info', $info_admin);
+        $this->display();
+    }
+
 }

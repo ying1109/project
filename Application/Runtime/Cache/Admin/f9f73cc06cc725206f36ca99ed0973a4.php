@@ -12,8 +12,8 @@
 
 	<!-- 顶部引入其他CSS文件 -->
 	
-    <link type="text/css" href="/Public/Admin/webuploader/webuploader.css" rel="stylesheet" />
-    <link type="text/css" href="/Public/Admin/webuploader/style.css" rel="stylesheet" />
+    <!--图片缩放放大镜图标-->
+    <link type="text/css" href="/Public/Admin/zoomify/zoomify.min.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -145,51 +145,40 @@
 		
     <div class="panel panel-default">
         <div class="panel-body">
-            <form class="form-horizontal" method="POST" action="">
-                <input type="hidden" name="id" value="<?php echo ($info['id']); ?>">
-
+            <form class="form-horizontal">
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">组别名称：</label>
-                    <div class="col-sm-6">
-                        <input class="form-control" name="name" value="<?php echo ($info["name"]); ?>">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">组别介绍：</label>
-                    <div class="col-sm-6">
-                        <input class="form-control" name="description" value="<?php echo ($info["description"]); ?>">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">状态：</label>
-                    <div class="col-sm-6">
-                        <label class="radio-inline">
-                            <input type="radio" name="status" id="inlineRadio1" value="1" checked>启用
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="status" id="inlineRadio2" value="0">禁用
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">权限选择：</label>
+                    <label class="col-sm-2 control-label">登录账号：</label>
                     <div class="col-sm-10">
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="checkAll" value="1">全选
-                        </label>
-                        <?php if(is_array($list_module)): $i = 0; $__LIST__ = $list_module;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><h4 style="font-weight: 700;"><?php echo ($v["name"]); ?></h4>
-                            <?php if(is_array($v['rule'])): $i = 0; $__LIST__ = $v['rule'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><label class="checkbox-inline">
-                                    <input type="checkbox" class="check" name="rules[]" value="<?php echo ($v1["id"]); ?>" <?php if(($v1["check"]) == "1"): ?>checked<?php endif; ?> ><?php echo ($v1["name"]); ?>
-                                </label><?php endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
+                        <p class="form-control-static"><?php echo ($info["account"]); ?></p>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-4">
-                        <button type="submit" class="btn btn-primary">提交</button>
+                    <label class="col-sm-2 control-label">昵称：</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static"><?php echo ($info["nickname"]); ?></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">头像：</label>
+                    <div class="col-sm-10">
+                        <img src="<?php echo ($info["portrait"]); ?>" style="width: 300px;" alt="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">创建时间：</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static"><?php echo (date('Y-m-d H:i:s', $info["create_time"])); ?></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">权限拥有：</label>
+                    <div class="col-sm-10">
+                        <?php if(is_array($list_module)): $i = 0; $__LIST__ = $list_module;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><h4 style="font-weight: 700;"><?php echo ($v["name"]); ?></h4>
+                            <?php if(is_array($v['rule'])): $i = 0; $__LIST__ = $v['rule'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i; if(($v1["check"]) == "1"): ?><span style="margin-right: 20px;"><?php echo ($v1["name"]); ?></span><?php endif; endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
                     </div>
                 </div>
             </form>
@@ -211,49 +200,10 @@
 
 <!--底部引入其他js文件-->
 
+    <!--图片缩放-->
+    <script type="text/javascript" charset="utf-8" src="/Public/Admin/zoomify/zoomify.min.js"></script>
     <script type="text/javascript">
-        // 全选
-        $('#checkAll').click(function () {
-            if ($('#checkAll').prop('checked')) {
-            	for (i = 0; i < $('.check').length; i++) {
-                    $('.check').eq(i).prop('checked', true);
-            	}
-            } else {
-                for (i = 0; i < $('.check').length; i++) {
-                    $('.check').eq(i).prop('checked', false);
-                }
-            }
-        });
-        // 选一个
-        $('.check').click(function () {
-            var num = 0;
-            for (i = 0; i < $('.check').length; i++) {
-                var check = $('.check').eq(i).prop('checked');
-                if (check) {
-                    num++;
-                }
-            }
-            if (num == $('.check').length) {
-                $('#checkAll').prop('checked', true);
-            } else {
-                $('#checkAll').prop('checked', false);
-            }
-        });
-
-        $(document).ready(function (){
-            var num = 0;
-            for (i = 0; i < $('.check').length; i++) {
-                var check = $('.check').eq(i).prop('checked');
-                if (check) {
-                    num++;
-                }
-            }
-            if (num == $('.check').length) {
-                $('#checkAll').prop('checked', true);
-            } else {
-                $('#checkAll').prop('checked', false);
-            }
-        })
+        $('img').zoomify();
     </script>
 
 

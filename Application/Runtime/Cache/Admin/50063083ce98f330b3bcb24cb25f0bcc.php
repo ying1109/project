@@ -187,6 +187,32 @@
 
 <!--底部引入其他js文件-->
 
+    <script type="text/javascript">
+        $('.btn-danger').click(function () {
+            if (confirm('确定删除吗？')) {
+                var id = $(this).attr('name');
+
+                $.ajax({
+                    url: "<?php echo U('Ajax/ruleDel');?>",
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        id: id,
+                    },
+                    success: function (data) {
+                        if (data.res == 1) {
+                            alert(data.msg);
+                            var url = "<?php echo U('rule');?>";
+                            location.href = url;
+                        } else {
+                            alert(data.msg);
+                        }
+                    }
+                })
+            }
+        })
+    </script>
+
 
 </body>
 </html>

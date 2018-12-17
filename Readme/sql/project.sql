@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-12-14 14:55:56
+Date: 2018-12-17 17:31:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -64,7 +64,7 @@ CREATE TABLE `admin` (
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
-INSERT INTO `admin` VALUES ('1', 'admin', '123456', 'a8f283efb0a7639652c9f09012f43cbb', '执笔画浮尘', '1551234567', '', '湖南省', '长沙市', '岳麓区', '', '1544547424', '127.0.0.1', '1544758317', '127.0.0.1', null, null, '', '1', '1', '1544341065');
+INSERT INTO `admin` VALUES ('1', 'admin', '123456', 'a8f283efb0a7639652c9f09012f43cbb', '执笔画浮尘', '1551234567', '', '湖南省', '长沙市', '岳麓区', '', '1544758317', '127.0.0.1', '1545008198', '127.0.0.1', null, null, '超级管理员拥有最高权限', '1', '1', '1544341065');
 
 -- ----------------------------
 -- Table structure for `admin_group`
@@ -83,7 +83,7 @@ CREATE TABLE `admin_group` (
 -- ----------------------------
 -- Records of admin_group
 -- ----------------------------
-INSERT INTO `admin_group` VALUES ('1', '超级管理员', '超级管理员', '1,2,3', '1544766530', '1');
+INSERT INTO `admin_group` VALUES ('1', '超级管理员', '超级管理员', '1,3', '1544766530', '1');
 
 -- ----------------------------
 -- Table structure for `admin_module`
