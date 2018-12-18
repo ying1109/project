@@ -355,8 +355,8 @@ class AuthController extends BaseController {
     public function resetPwd() {
         $url = CONTROLLER_NAME . '/' . 'admin';
         $this->assign('url', $url);
-        $one   = array('name' => '权限管理', 'value' => U('Auth/resetPwd'));
-        $two   = array('name' => '安全设置', 'value' => U('Auth/resetPwd'));
+        $one = array('name' => '权限管理', 'value' => U('Auth/resetPwd'));
+        $two = array('name' => '安全设置', 'value' => U('Auth/resetPwd'));
         $this->assign("one", $one);
         $this->assign("two", $two);
 
@@ -367,8 +367,8 @@ class AuthController extends BaseController {
     public function myAuth() {
         $url = CONTROLLER_NAME . '/' . 'myAuth';
         $this->assign('url', $url);
-        $one   = array('name' => '权限管理', 'value' => U('Auth/myAuth'));
-        $two   = array('name' => '我的权限', 'value' => U('Auth/myAuth'));
+        $one = array('name' => '权限管理', 'value' => U('Auth/myAuth'));
+        $two = array('name' => '我的权限', 'value' => U('Auth/myAuth'));
         $this->assign("one", $one);
         $this->assign("two", $two);
 
