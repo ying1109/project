@@ -5884,3 +5884,239 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000749s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
 
+[ 2018-12-17T17:34:34+08:00 ] 127.0.0.1 /admin.php/Auth/auth.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001411s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0029s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminGroupModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminGroupModel.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0083s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminRuleModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminRuleModel.class.php 第 54 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminRuleModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminRuleModel.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `admin_rule` [ RunTime:0.0159s ]
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_group` WHERE `status` > 0 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_group` WHERE `status` > 0 ORDER BY id asc LIMIT 0,1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `admin_rule` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `admin_rule` WHERE `status` > 0 AND `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_rule` WHERE `status` > 0 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 53 行.
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 58 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 69 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 74 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 97 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 102 行.
+NOTIC: [8] Undefined variable: three H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 130 行.
+NOTIC: [8] Undefined variable: four H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012260s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2018-12-17T17:34:36+08:00 ] 127.0.0.1 /admin.php/Auth/authAddEdit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001318s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0151s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModuleModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModuleModel.class.php 第 54 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModuleModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModuleModel.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `admin_module` [ RunTime:0.0086s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminRuleModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminRuleModel.class.php 第 54 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminRuleModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminRuleModel.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `admin_rule` [ RunTime:0.0061s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminGroupModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminGroupModel.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `admin_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `admin_module` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `admin_module` ORDER BY id asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_rule` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `admin_rule` WHERE `module` = '1' ORDER BY id asc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' H:\www\project\Application\Runtime\Cache\Admin\f699e214aae4ed3475877b8425f345c3.php 第 56 行.
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' H:\www\project\Application\Runtime\Cache\Admin\f699e214aae4ed3475877b8425f345c3.php 第 61 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' H:\www\project\Application\Runtime\Cache\Admin\f699e214aae4ed3475877b8425f345c3.php 第 72 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' H:\www\project\Application\Runtime\Cache\Admin\f699e214aae4ed3475877b8425f345c3.php 第 77 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' H:\www\project\Application\Runtime\Cache\Admin\f699e214aae4ed3475877b8425f345c3.php 第 100 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' H:\www\project\Application\Runtime\Cache\Admin\f699e214aae4ed3475877b8425f345c3.php 第 105 行.
+NOTIC: [8] Undefined variable: four H:\www\project\Application\Runtime\Cache\Admin\f699e214aae4ed3475877b8425f345c3.php 第 136 行.
+NOTIC: [8] Undefined index: check H:\www\project\Application\Runtime\Cache\Admin\f699e214aae4ed3475877b8425f345c3.php 第 185 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013900s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001048s ]
+
+[ 2018-12-17T17:34:38+08:00 ] 127.0.0.1 /admin.php/Auth/authAddEdit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001175s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0171s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0154s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModuleModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModuleModel.class.php 第 54 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModuleModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModuleModel.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `admin_module` [ RunTime:0.0076s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminRuleModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminRuleModel.class.php 第 54 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminRuleModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminRuleModel.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `admin_rule` [ RunTime:0.0080s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminGroupModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminGroupModel.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0511s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `admin_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_module` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `admin_module` ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_rule` [ RunTime:0.0437s ]
+SQL: SELECT * FROM `admin_rule` WHERE `module` = '1' ORDER BY id asc  [ RunTime:0.0006s ]
+NOTIC: [2] implode(): Invalid arguments passed H:\www\project\Application\Admin\Controller\AuthController.class.php 第 332 行.
+SQL: UPDATE `admin_group` SET `rules`='',`name`='超级管理员',`description`='超级管理员',`status`='1' WHERE `id` = 1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004599s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004661s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000416s ]
+
+[ 2018-12-17T17:34:39+08:00 ] 127.0.0.1 /admin.php/Auth/auth.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0224s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminGroupModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminGroupModel.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0070s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminRuleModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminRuleModel.class.php 第 54 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminRuleModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminRuleModel.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `admin_rule` [ RunTime:0.0149s ]
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0088s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_group` WHERE `status` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_group` WHERE `status` > 0 ORDER BY id asc LIMIT 0,1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `admin_rule` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `admin_rule` WHERE `status` > 0 AND `id` = 0 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 53 行.
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 58 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 69 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 74 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 97 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 102 行.
+NOTIC: [8] Undefined variable: three H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 130 行.
+NOTIC: [8] Undefined variable: four H:\www\project\Application\Runtime\Cache\Admin\f9522b46b13d8dc4dfb2f77f6d1bd29e.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000792s ]
+
+[ 2018-12-17T17:34:41+08:00 ] 127.0.0.1 /admin.php/Auth/myAuth.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModuleModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModuleModel.class.php 第 54 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModuleModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModuleModel.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `admin_module` [ RunTime:0.0068s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminRuleModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminRuleModel.class.php 第 54 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminRuleModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminRuleModel.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `admin_rule` [ RunTime:0.0176s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminGroupModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminGroupModel.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `admin_group` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `admin_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_module` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `admin_module` ORDER BY id asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_rule` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `admin_rule` WHERE `module` = '1' ORDER BY id asc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 56 行.
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 61 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 63 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 66 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 72 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 77 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 79 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 82 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 85 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 88 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 91 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 94 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 100 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 105 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 107 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 110 行.
+NOTIC: [8] Undefined variable: one H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 127 行.
+NOTIC: [8] Undefined variable: two H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 130 行.
+NOTIC: [8] Undefined variable: three H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 133 行.
+NOTIC: [8] Undefined variable: four H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 136 行.
+NOTIC: [8] Undefined index: check H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 181 行.
+NOTIC: [8] Undefined index: check H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 181 行.
+NOTIC: [8] Undefined index: check H:\www\project\Application\Runtime\Cache\Admin\f9f73cc06cc725206f36ca99ed0973a4.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018223s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+

@@ -177,7 +177,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">权限拥有：</label>
                     <div class="col-sm-10">
-                        <?php if(is_array($list_module)): $i = 0; $__LIST__ = $list_module;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><h4 style="font-weight: 700;"><?php echo ($v["name"]); ?></h4>
+                        <?php if(is_array($list_module)): $i = 0; $__LIST__ = $list_module;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(($v["check"]) == "1"): ?><h4 style="font-weight: 700;"><?php echo ($v["name"]); ?></h4><?php endif; ?>
                             <?php if(is_array($v['rule'])): $i = 0; $__LIST__ = $v['rule'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i; if(($v1["check"]) == "1"): ?><span style="margin-right: 20px;"><?php echo ($v1["name"]); ?></span><?php endif; endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
                     </div>
                 </div>

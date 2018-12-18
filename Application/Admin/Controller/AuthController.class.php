@@ -365,6 +365,13 @@ class AuthController extends BaseController {
 
     // 我的权限
     public function myAuth() {
+        $url = CONTROLLER_NAME . '/' . 'myAuth';
+        $this->assign('url', $url);
+        $one   = array('name' => '权限管理', 'value' => U('Auth/myAuth'));
+        $two   = array('name' => '我的权限', 'value' => U('Auth/myAuth'));
+        $this->assign("one", $one);
+        $this->assign("two", $two);
+
         $AdminModule = D('AdminModule');
         $AdminRule   = D('AdminRule');
         $AdminGroup  = D('AdminGroup');
@@ -382,10 +389,13 @@ class AuthController extends BaseController {
                 foreach ($list_module[$k]['rule'] as $k1 => $v1) {
                     if (in_array($v1['id'],$rule_arr)) {
                         $list_module[$k]['rule'][$k1]['check'] = 1;
+                        $list_module[$k]['check']              = 1;
+
                     }
                 }
             }
         }
+
         $this->assign('list_module',$list_module );
 
         $this->assign('info', $info_admin);
