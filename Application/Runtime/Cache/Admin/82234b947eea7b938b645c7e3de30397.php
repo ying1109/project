@@ -243,9 +243,35 @@
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">详细地址：</label>
-                    <div class="col-sm-6">
-                        <input class="form-control" name="address">
+                    <div class="col-sm-4">
+                        <input class="form-control" name="address" id="s_address">
                     </div>
+                    <div class="col-sm-2">
+                        <button id="lbs_src" type="button" class="btn btn-success">定位</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input002" class="col-sm-2 control-label form-label">坐标：</label>
+                    <div class="col-sm-3">
+                        <input name="longitude" value="<?php echo ($info['longitude']); ?>" type="text" id="lng" class="form-control" >
+                    </div>
+                    <div class="col-sm-3">
+                        <input name="latitude" value="<?php echo ($info['latitude']); ?>" type="text" id="lat" class="form-control" >
+                    </div>
+                    <input name="address_components_province" value="<?php echo ($info['s_province']); ?>" id="address_components_province" class="address_components" type="hidden">
+                    <input name="address_components_city" value="<?php echo ($info['s_city']); ?>" id="address_components_city" class="address_components" type="hidden">
+                    <input name="address_components_district" value="<?php echo ($info['s_county']); ?>" id="address_components_district" class="address_components" type="hidden">
+                    <input name="address_components_street" value="<?php echo ($info['detail_address']); ?>" id="address_components_street" class="address_components" type="hidden">
+                    <input name="address_components_street_number" value="<?php echo ($info['address_components']['street_number']); ?>" id="address_components_street_number" class="address_components" type="hidden">
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label form-label"></label>
+                    <div class="col-sm-10">
+                        <div class="col-sm-8" style="height:400px;" id="tencent_map"></div>
+                    </div>
+
                 </div>
 
                 <div class="form-group">
@@ -313,6 +339,7 @@
     <script>
         _init_area();
     </script>
+
     <!--选中地区-->
     <script>
         var s_province = "<?php echo ($info['s_province']); ?>";
@@ -327,6 +354,7 @@
             $("#s_county option:selected").val(s_county);
         }
     </script>
+
     <!--头像上传-->
     <script type="text/javascript" charset="utf-8" src="/Public/Admin/webuploader/webuploader.js"></script>
     <script>
@@ -985,6 +1013,96 @@
                 });
 
 
+            })
+        })
+    </script>
+
+    <!-- 腾讯地图 -->
+    <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp"></script>
+    <script>
+        <?php if($info['longitude'] and $info['latitude']): ?>var map = new qq.maps.Map(document.getElementById("tencent_map"), {
+                // 地图的中心地理坐标。
+                center: new qq.maps.LatLng(<?php echo ($info['latitude']); ?>,<?php echo ($info['longitude']); ?>),
+                zoom: 16
+            });
+            // 添加初始标记
+            var center = new qq.maps.LatLng(<?php echo ($info['latitude']); ?>,<?php echo ($info['longitude']); ?>);
+            var marker = new qq.maps.Marker({
+                position: center,
+                map: map
+            });
+        <?php else: ?>
+            var map = new qq.maps.Map(document.getElementById("tencent_map"), {
+                // 地图的中心地理坐标。
+                center: new qq.maps.LatLng(39.916527,116.397128),
+                zoom: 5
+            });
+            // 添加初始标记
+            var center = new qq.maps.LatLng(39.914850, 116.403765);
+            var marker = new qq.maps.Marker({
+                position: center,
+                map: map
+            });<?php endif; ?>
+
+        qq.maps.event.addListener(
+            map,
+            'click',
+            function(event) {
+                $("#lng").val( event.latLng.getLng() );
+                $("#lat").val( event.latLng.getLat() );
+
+                // 添加标记
+                center = new qq.maps.LatLng(event.latLng.getLat(), event.latLng.getLng() );
+                marker.setPosition(center);
+
+                // 清空
+                $(".address_components").val("");
+            }
+        );
+
+        $("#lbs_src").on('click',function(){
+
+            var s_province = $("#s_province").val();
+            var s_city     = $("#s_city").val();
+            var s_county   = $("#s_county").val();
+            var s_address    = $("#s_address").val();
+
+            if ( !s_province ||  !s_city ||  !s_county ||  !s_address ) {
+                alert("请输入所在地址");
+                return
+            };
+            var address = s_province + s_city + s_county + s_address;
+
+            $.ajax({
+                url:'<?php echo U('baseToolSrcLBS');?>',
+                type:'POST',
+                datatype:'jsonp',
+                jsonp:'jsoncallback',
+                data:{
+                    address:address,
+                },
+                success:function(data){
+                    console.log(data)
+                    if (data.status==0) {
+                        $("#lng").val( data.result.location.lng )
+                        $("#lat").val( data.result.location.lat )
+
+                        $("#address_components_province").val(data.result.address_components.province);
+                        $("#address_components_city").val(data.result.address_components.city);
+                        $("#address_components_district").val(data.result.address_components.district);
+                        $("#address_components_street").val(data.result.address_components.street);
+                        $("#address_components_street_number").val(data.result.address_components.street_number);
+
+                        center = new qq.maps.LatLng( data.result.location.lat , data.result.location.lng );
+                        marker.setPosition(center);
+                        map.setCenter(center);
+                        map.setZoom(16)
+                    }else{
+                        alert(data.message)
+                    };
+                },error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert('系统繁忙，请稍后再试');
+                }
             })
         })
     </script>

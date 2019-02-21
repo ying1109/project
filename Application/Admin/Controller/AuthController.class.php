@@ -93,6 +93,27 @@ class AuthController extends BaseController {
 
         $this->display();
     }
+    // 定位
+    public function baseToolSrcLBS(){
+
+        $url = "http://apis.map.qq.com/ws/geocoder/v1/?address=".$_POST['address'].'&key=E32BZ-HVNWS-KVPOJ-6JS3E-INDYZ-D2B5O';
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        // post数据
+        curl_setopt($ch, CURLOPT_GET, 1);
+        // post的变量
+        // curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data) );
+
+        $output = curl_exec($ch);
+        curl_close($ch);
+
+        $output = json_decode($output,true);
+
+        $this->ajaxReturn($output);
+    }
     
     // 模块
     public function module() {
