@@ -21,17 +21,18 @@ class LoginController extends Controller {
             $this->ajaxReturn(array('res'=>0,'msg'=>'账号、密码、验证码不能为空！'));
         } else {
             if ($code_input == $code_admin) {
-                $password = md5(md5($account) . md5($password));
-                $info     = M('Admin')->where(array('username'=>$account,'password_md5'=>$password))->find();
+                // $password = md5(md5($account) . md5($password));
+                $password = md5($password);
+                $info     = M('Admin')->where(array('account'=>$account,'password_md5'=>$password))->find();
                 if (!$info) {
                     $this->ajaxReturn(array('res'=>0,'msg'=>'账号或密码错误'));
                 } else {
-                    $map['id']               = $info['id'];
-                    $data['this_login_time'] = time();
-                    $data['this_login_ip']   = $_SERVER['REMOTE_ADDR'];
-                    $data['last_login_time'] = $info['this_login_time'];
-                    $data['last_login_ip']   = $info['this_login_ip'];
-                    M('Admin')->where($map)->save($data);
+                    // $map['id']               = $info['id'];
+                    // $data['this_login_time'] = time();
+                    // $data['this_login_ip']   = $_SERVER['REMOTE_ADDR'];
+                    // $data['last_login_time'] = $info['this_login_time'];
+                    // $data['last_login_ip']   = $info['this_login_ip'];
+                    // M('Admin')->where($map)->save($data);
 
                     //确认登录信息：保存cookie/session
                     cookie('id',$info['id']);

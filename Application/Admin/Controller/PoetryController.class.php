@@ -80,7 +80,7 @@ class PoetryController extends BaseController {
         $this->assign('type', I('type'));
 
         if (IS_POST) {
-            $data['name']    = trim(I('name'), '');
+            $data['name']       = trim(I('name'), '');
             $data['author']  = trim(I('author'), '');
             $data['dynasty'] = trim(I('dynasty'), '');
             $data['content'] = trim(I('content'), '');

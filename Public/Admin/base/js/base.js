@@ -1,10 +1,10 @@
 // 顶部点击展闭左侧导航栏
 $('#top_icon').click(function(event) {
 	if ($('#navMenubox').is(':hidden')) {
-		$('#navMenubox').show();
+		$('#navMenubox').show('slow');
 		$('.page_content').css('margin-left', '250px');
 	} else {
-		$('#navMenubox').hide();
+		$('#navMenubox').hide('slow');
 		$('.page_content').css('margin-left', '0');
 	}
 });

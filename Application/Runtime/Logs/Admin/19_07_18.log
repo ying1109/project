@@ -1,0 +1,158 @@
+[ 2019-07-18T09:46:53+08:00 ] 127.0.0.1 /admin/public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-07-18T09:47:21+08:00 ] 127.0.0.1 /admin/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000989s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001051s ]
+NOTIC: [8] A session had already been started - ignoring session_start() H:\www\project\ThinkPHP\Common\functions.php 第 1272 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001496s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001637s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023825s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023954s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001834s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001901s ]
+
+[ 2019-07-18T09:47:34+08:00 ] 127.0.0.1 /index.php/Admin/Login/ajax_login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002850s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `admin` WHERE `account` = 'admin' AND `password_md5` = '0cf794bf09dfa32037d4b1a20f35f236' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2019-07-18T10:16:00+08:00 ] 127.0.0.1 /index.php/Admin/Login/ajax_login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000966s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001192s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `admin` WHERE `account` = 'admin' AND `password_md5` = 'a8f283efb0a7639652c9f09012f43cbb' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-07-18T10:17:13+08:00 ] 127.0.0.1 /index.php/Admin/Login/ajax_login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0285s ]
+SQL: SELECT * FROM `admin` WHERE `account` = 'admin' AND `password_md5` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2019-07-18T10:17:13+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000123s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002958s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Undefined index: nickname H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 31 行.
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 56 行.
+NOTIC: [8] Use of undefined constant Poetry - assumed 'Poetry' H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 61 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 63 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 66 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 72 行.
+NOTIC: [8] Use of undefined constant Auth - assumed 'Auth' H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 77 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 79 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 82 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 85 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 88 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 91 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 94 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 100 行.
+NOTIC: [8] Use of undefined constant System - assumed 'System' H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 105 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 107 行.
+NOTIC: [8] Undefined variable: url H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 110 行.
+NOTIC: [8] Undefined variable: two H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 130 行.
+NOTIC: [8] Undefined variable: three H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 133 行.
+NOTIC: [8] Undefined variable: four H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 136 行.
+NOTIC: [8] Undefined index: nickname H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 159 行.
+NOTIC: [8] Undefined index: portrait H:\www\project\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 166 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027233s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010566s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003637s ]
+
+[ 2019-07-18T10:17:21+08:00 ] 127.0.0.1 /index.php/Admin/Poetry/poem.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000833s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0169s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2048] Declaration of Admin\Model\ScgfModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\ScgfModel.class.php 第 43 行.
+ERR: 1146:Table 'project.scgf' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `scgf`
+ERR: 1146:Table 'project.scgf' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `scgf`
+
+[ 2019-07-18T10:17:30+08:00 ] 127.0.0.1 /index.php/Admin/Poetry/sentence.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0177s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0211s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+ERR: 非法操作:sentence
+
+[ 2019-07-18T10:17:46+08:00 ] 127.0.0.1 /index.php/Admin/System/aboutUs.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::delete() should be compatible with Think\Model::delete($options = Array) H:\www\project\Application\Admin\Model\AdminModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0097s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0353s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0017s ]
+NOTIC: [2048] Declaration of Admin\Model\AboutUsModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) H:\www\project\Application\Admin\Model\AboutUsModel.class.php 第 43 行.
+ERR: 1146:Table 'project.about_us' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `about_us`
+ERR: 1146:Table 'project.about_us' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `about_us`
+
